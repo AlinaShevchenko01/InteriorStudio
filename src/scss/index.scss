@@ -1,0 +1,26 @@
+@use "base/reset";
+@use "base/base";
+
+@use "fonts/fonts";
+
+@use "utils/variables" as variables;
+@use "utils/media" as media;
+@use "utils/mixins" as mixins;
+
+@use "base/btn-discover";
+@use "base/btn-make-request";
+@use "base/burger";
+@use "base/collage";
+@use "base/contact-block";
+@use "base/footer";
+@use "base/footer-small";
+@use "base/header";
+@use "base/header-navigation";
+@use "base/lorem";
+@use "base/topic-name";
+
+@use "pages/main/about";
+@use "pages/main/hero";
+@use "pages/main/projects";
+
+

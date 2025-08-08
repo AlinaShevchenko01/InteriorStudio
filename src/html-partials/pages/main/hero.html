@@ -1,0 +1,71 @@
+<section class="hero">
+    <div class="hero__wrapper">
+        <div class="hero__swiper swiper">
+            <div class="swiper-wrapper">
+                <div class="hero__swiper-slide swiper-slide">
+                    <img src="@assets/img/main/section1-hero/1440/section1-hero-photo1.png">
+
+                </div>
+                <div class="hero__swiper-slide swiper-slide">
+                    <img src="@assets/img/main/section1-hero/1440/section1-hero-photo2.png">
+                </div>
+                <div class="hero__swiper-slide swiper-slide">
+                    <img src="@assets/img/main/section1-hero/1440/section1-hero-photo3.png">
+                </div>
+                <div class="hero__swiper-slide swiper-slide">
+                    <img src="@assets/img/main/section1-hero/1440/section1-hero-photo4.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__inner">
+            <h1 class="hero__title">
+                Thoughtful making of space
+            </h1>
+
+            @@include('../../base/btn-discover.html', { "class": "hero__btn-discover" })
+        </div>
+
+        <div class="hero__inner hero__inner_pagination">
+            <span>
+                <svg class="hero__arrow hero__arrow_left"
+                        width="6px"
+                     height="10px">
+                    <use xlink:href="#svg--main--arrow-left"></use>
+                </svg>
+            </span>
+
+            <span class="hero__pagination-slide-current">
+            </span>
+
+            <span class="hero__pagination-progressbar">
+                <span class="hero__pagination-fill-progressbar"></span>
+            </span>
+
+            <span class="hero__pagination-slide-total">
+            </span>
+
+            <span>
+                <svg class="hero__arrow hero__arrow_right"
+                     width="6px"
+                     height="10px">
+                    <use xlink:href="#svg--main--arrow-left"></use>
+                </svg>
+            </span>
+        </div>
+
+        <div class="hero__inner hero__inner_proportions">
+            <p class="hero__text">
+                Next Project
+            </p>
+
+            <p class="hero__proportions">
+                Perfect proportions
+            </p>
+        </div>
+
+        <div class="hero__inner">
+            @@include('../../base/contact-block.html', { "class": "hero__contact-block" })
+        </div>
+    </div>
+</section>

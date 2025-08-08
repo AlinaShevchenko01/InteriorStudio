@@ -1,0 +1,110 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+
+  &__wrapper{
+    max-width: 1440px;
+    @include mixins.flex-between-center;
+    gap: 32px;
+    color: variables.$color-main-bg;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 24px 64px 24px 62px;
+    margin: 0 auto;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 1024px;
+      padding: 25px 56px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      max-width: 768px;
+      padding: 25px 48px;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      max-width: 375px;
+      padding: 20px 24px;
+    }
+  }
+
+  &__logo{
+    font-size: 14px;
+    font-weight: variables.$font-weight-regular;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  &__container{
+    flex: 1 1 84.7%;
+    max-width: 1113px;
+
+    @include media.media-breakpoint-down-equal(md){
+      flex: 1 1 83%;
+      max-width: 757px;
+      @include mixins.flex-between-center;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      flex: 1 1 77.23%;
+      max-width: 519px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      flex: 1 1 29.97%;
+      max-width: 98px;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__inner{
+    width: 100%;
+    @include mixins.flex-between-center;
+    gap: 32px;
+
+    @include media.media-breakpoint-down-equal(md){
+      flex: 1 1 30.52%;
+      max-width: 231px;
+    }
+  }
+
+  &__column{
+    flex: 1 1 25.42%;
+    max-width: 25.42%;
+    @include mixins.flex-between-center;
+    gap: 32px;
+
+    @include media.media-breakpoint-down-equal(md){
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__btn-request{
+    font-weight: variables.$font-weight-semibold;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: variables.$color-main-bg;
+    background-color: transparent;
+    border: 1px solid variables.$color-border;
+    padding: 16px 3.26vw;
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 13px 34px 13px 35px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      display: none;
+    }
+  }
+}

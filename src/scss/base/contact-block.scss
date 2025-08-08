@@ -1,0 +1,158 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.contact-block{
+  width: 634px;
+  @include mixins.flex-between-center;
+  gap: 32px;
+  font-size: 11px;
+  font-weight: variables.$font-weight-semibold;
+  line-height: 1.12;
+  letter-spacing: 0.06em;
+
+  @include media.media-breakpoint-down-equal(md){
+    width: 546px;
+  }
+
+  @include media.media-breakpoint-down-equal(sm){
+    width: 517px;
+  }
+
+  @include media.media-breakpoint-down-equal(xs){
+    width: 268px;
+  }
+
+  &__inner{
+    &:first-of-type{
+      margin-right: 48px;
+
+      @include media.media-breakpoint-down-equal(md){
+        margin-right: 37px;
+      }
+
+      @include media.media-breakpoint-down-equal(sm){
+        margin-right: 34px;
+      }
+
+      @include media.media-breakpoint-down-equal(xs){
+        display: none;
+
+      }
+    }
+  }
+
+  &__list-social{
+    padding-top: 2px;
+    @include mixins.flex-between-center;
+    gap: 16px;
+  }
+
+  &__select{
+    position: relative;
+    display: inline-block;
+    width: 117px;
+    transition: transform 0.3s ease;
+
+    select{
+      width: 100%;
+      font-size: 11px;
+      font-weight: variables.$font-weight-semibold;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      color: variables.$color-main-bg;
+      backdrop-filter: blur(2px);
+      box-shadow: inset 0 -0px 0px 0 variables.$color-box-shadow1, 0 1px 1px 0 variables.$color-box-shadow2;
+      background: variables.$color-bg1;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      appearance: none;
+      padding: 7px 51px 7px 28px;
+
+      @include media.media-breakpoint-down-equal(md){
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+        border: 1px solid variables.$color-border2;
+        border-radius: 88px;
+        padding: 7px 51px 5px 28px;
+      }
+
+      @include media.media-breakpoint-down-equal(xs){
+        padding: 7px 51px 4px 28px;
+      }
+    }
+
+      &::before{
+      position: absolute;
+      content: "";
+      top: 30%;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background: url("@assets/svg/main/maps-and-flags.svg");
+      z-index: 2;
+
+        @include media.media-breakpoint-down-equal(xs){
+          left: 12px;
+        }
+    }
+
+    &::after{
+      position: absolute;
+      content: "";
+      top: 38%;
+      right: 12px;
+      width: 9px;
+      height: 6px;
+      background: url("@assets/svg/main/arrow-down.svg");
+      z-index: 2;
+    }
+
+    &.active::after{
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__select-option{
+    font-weight: variables.$font-weight-semibold;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    background: variables.$color-select-option;
+  }
+
+  &__list-data{
+    padding-top: 2px;
+    @include mixins.flex-between-center;
+    gap: 31px;
+    margin-right: 2px;
+  }
+
+  &__list-data_full{
+    @include media.media-breakpoint-down-equal(md){
+      display: none;
+    }
+  }
+
+  &__list-data_small{
+    display: none;
+
+    @include media.media-breakpoint-down-equal(md){
+      display: flex;
+      gap: 40px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      gap: 32px;
+      margin-right: 0;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.burger{
+  display: none;
+
+  @include media.media-breakpoint-down-equal(md){
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: -4px;
+  }
+
+  @include media.media-breakpoint-down-equal(sm){
+    margin-top: 0;
+  }
+
+  &__icon{
+    width: 28px;
+    height: 8px;
+    position: relative;
+    @include mixins.flex-column;
+    justify-content: space-between;
+
+    span{
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: variables.$color-main-bg;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.active{
+      span{
+        &:first-of-type{
+          transform: rotate(45deg) translateY(12px) scale(1.6);
+        }
+
+        &:last-of-type{
+          transform: rotate(-45deg) translateY(-12px) scale(1.6);
+        }
+      }
+    }
+  }
+
+  &__menu{
+    @include media.media-breakpoint-down-equal(xs){
+      display: none;
+    }
+  }
+}

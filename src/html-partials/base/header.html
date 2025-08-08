@@ -1,0 +1,38 @@
+<header class="header">
+    <div class="header__wrapper">
+        <p class="header__logo">
+            Logo
+        </p>
+
+        <div class="header__container">
+            <div class="header__burger burger">
+                <div class="burger__icon">
+                    <span></span>
+
+                    <span></span>
+                </div>
+
+                <p class="burger__menu">
+                    Menu
+                </p>
+            </div>
+
+            <div class="header__inner">
+                @@include('header-navigation.html',
+                { "class": "menu-desktop"})
+
+                <div class="header__column">
+                    <div class="header__languages">
+                <span>
+                    En
+                </span>
+                    </div>
+
+                    <button class="header__btn-request">
+                        Send Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
