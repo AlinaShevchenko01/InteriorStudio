@@ -1447,6 +1447,8 @@ a {
   }
 
   .hero__inner_proportions {
+    top: auto;
+    left: auto;
     bottom: 154px;
     right: -7.6vw;
   }
