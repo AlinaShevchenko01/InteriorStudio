@@ -510,6 +510,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  color: rgba(253, 253, 253, 0.32);
+}
+
 @font-face {
   font-family: adieu;
   font-display: swap;
@@ -801,6 +805,10 @@ a {
   background-color: transparent;
 }
 
+.header.scroll {
+  background-color: #828282;
+}
+
 .header__wrapper {
   max-width: 1440px;
   display: -webkit-box;
@@ -825,6 +833,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.3em;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -931,22 +940,6 @@ a {
   max-width: 35.76vw;
 }
 
-.main-about__inner:last-of-type {
-  position: relative;
-  max-width: 76.25vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: self-start;
-      -ms-flex-align: self-start;
-          align-items: self-start;
-  gap: 32px;
-  margin-top: 258px;
-}
-
 .main-about__title {
   margin-bottom: 30px;
 }
@@ -961,6 +954,22 @@ a {
 
 .main-about__text:last-of-type {
   margin-bottom: 50px;
+}
+
+.main-about__container {
+  position: relative;
+  max-width: 76.25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+  gap: 32px;
+  margin-top: 258px;
 }
 
 .main-about__picture-static img {
@@ -1154,30 +1163,20 @@ a {
 }
 
 .main-projects__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
   gap: 8px;
 }
 
 .main-projects__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
 
@@ -1222,12 +1221,7 @@ a {
 }
 
 .main-projects__more-examples {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 49.6%;
-          flex: 1 1 49.6%;
-  max-width: 49.7%;
   background-color: #fff;
-  padding: 7.85vw 0 11.46vw;
 }
 
 .main-projects__more-examples img {
@@ -1363,11 +1357,6 @@ a {
     max-width: 43.75vw;
   }
 
-  .main-about__inner:last-of-type {
-    max-width: 74.29vw;
-    margin-top: 186px;
-  }
-
   .main-about__title {
     margin-bottom: 20px;
   }
@@ -1378,6 +1367,11 @@ a {
 
   .main-about__text:last-of-type {
     margin-bottom: 30px;
+  }
+
+  .main-about__container {
+    max-width: 74.29vw;
+    margin-top: 186px;
   }
 
   .main-about__picture-static img {
@@ -1515,17 +1509,17 @@ a {
     max-width: 520px;
   }
 
-  .main-about__inner:last-of-type {
-    max-width: 520px;
-    margin-top: 200px;
-  }
-
   .main-about__title {
     margin-bottom: 18px;
   }
 
   .main-about__text:last-of-type {
     margin-bottom: 26px;
+  }
+
+  .main-about__container {
+    max-width: 520px;
+    margin-top: 200px;
   }
 
   .main-about__picture-static img {
@@ -1583,6 +1577,7 @@ a {
   }
 
   .hero__inner_proportions {
+    left: auto;
     bottom: auto;
     top: 93.9vw;
     right: -15.6vw;
@@ -1663,7 +1658,11 @@ a {
     max-width: 100%;
   }
 
-  .main-about__inner:last-of-type {
+  .main-about__text:first-of-type {
+    margin-bottom: 14px;
+  }
+
+  .main-about__container {
     max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1671,10 +1670,6 @@ a {
             flex-direction: column;
     gap: 0;
     margin-top: 194px;
-  }
-
-  .main-about__text:first-of-type {
-    margin-bottom: 14px;
   }
 
   .main-about__img {
