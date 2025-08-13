@@ -2172,10 +2172,6 @@ a {
   .no-webp .footer {
     background: url("/InteriorStudio/assets/img/main/footer/footer-bg-768.png") no-repeat center/cover; }
 
-  .footer {
-    position: relative;
-  }
-
   .footer__wrapper {
     max-width: 584px;
     padding: 92px 32px 0;
