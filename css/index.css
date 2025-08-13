@@ -1846,7 +1846,7 @@ a {
   }
 
   .no-webp .footer {
-    background: url(../assets/img/main/footer/footer-bg-1024.png) no-repeat center/cover; }
+    background: url("../assets/img/main/footer/footer-bg-1024.png") no-repeat center/cover; }
 
   .footer__wrapper {
     max-width: 789px;
