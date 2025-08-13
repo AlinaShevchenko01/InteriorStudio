@@ -899,7 +899,7 @@ a {
   left: 10px;
   width: 10px;
   height: 10px;
-  background: url("../assets/svg/main/maps-and-flags.svg");
+  background: url("/InteriorStudio/assets/svg/main/maps-and-flags.svg");
   z-index: 2;
 }
 
@@ -910,7 +910,7 @@ a {
   right: 12px;
   width: 9px;
   height: 6px;
-  background: url("../assets/svg/main/arrow-down.svg");
+  background: url("/InteriorStudio/assets/svg/main/arrow-down.svg");
   z-index: 2;
 }
 
@@ -972,7 +972,7 @@ a {
 }
 
 .no-webp .footer {
-  background: url("../assets/img/main/footer/footer-bg-1440.png") no-repeat center/cover; }
+  background: url("/InteriorStudio/assets/img/main/footer/footer-bg-1440.png") no-repeat center/cover; }
 
 .footer {
   position: relative;
@@ -1846,7 +1846,7 @@ a {
   }
 
   .no-webp .footer {
-    background: url("../assets/img/main/footer/footer-bg-1024.png") no-repeat center/cover; }
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-1024.png") no-repeat center/cover; }
 
   .footer__wrapper {
     max-width: 789px;
@@ -2170,7 +2170,7 @@ a {
   }
 
   .no-webp .footer {
-    background: url("../assets/img/main/footer/footer-bg-768.png") no-repeat center/cover; }
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-768.png") no-repeat center/cover; }
 
   .footer {
     position: relative;
@@ -2689,7 +2689,7 @@ a {
   }
 
   .no-webp .footer {
-    background: url("../assets/img/main/footer/footer-bg-375.png") no-repeat center/cover; }
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-375.png") no-repeat center/cover; }
 
   .footer__text {
     max-width: 290px;
@@ -2747,19 +2747,19 @@ a {
   }
 }
 
-.webp .footer { background: url(../assets/img/main/footer/footer-bg-1440.webp) no-repeat center/cover; }
+.webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1440.webp) no-repeat center/cover; }
 
 @media (max-width: 1024px) {
 
-  .webp .footer { background: url(../assets/img/main/footer/footer-bg-1024.webp) no-repeat center/cover; }
+  .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1024.webp) no-repeat center/cover; }
 }
 
 @media (max-width: 768px) {
 
-  .webp .footer { background: url(../assets/img/main/footer/footer-bg-768.webp) no-repeat center/cover; }
+  .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-768.webp) no-repeat center/cover; }
 }
 
 @media (max-width: 375px) {
 
-  .webp .footer { background: url(../assets/img/main/footer/footer-bg-375.webp) no-repeat center/cover; }
+  .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-375.webp) no-repeat center/cover; }
 }
