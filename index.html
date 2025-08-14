@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible, Content-Security-Policy"
           content="IE=edge 'unsafe-inline'" />
     <meta
@@ -12,7 +11,7 @@
      by lightning-fast development of projects employing unique styles and architecture.">
     <title>Interior studio</title>
     <link rel="stylesheet"
-          href="css/index.min.css?_v=20250814091443">
+          href="css/index.min.css?_v=20250814153729">
 </head>
 
 <svg style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -50,9 +49,15 @@
                 </p>
             </div>
 
-            <div class="burger-open">
-    <nav class="header__navigation burger-open__navigation">
-    <ul>
+            <div class="header__inner">
+                <nav class="header-navigation menu-desktop">
+    <ul class="header-navigation__list">
+        <li>
+            <a href="#" class="header-navigation__link_mobile">
+                Home
+            </a>
+        </li>
+
         <li>
             <a>
                 Projects
@@ -80,7 +85,63 @@
     </ul>
 </nav>
 
-    <div class="contact-block">
+                <div class="header__column">
+                    <div class="header__languages">
+                <span>
+                    En
+                </span>
+                    </div>
+
+                    <button class="btn-send-request header__btn-request">
+    Send Request
+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="burger-open">
+    <nav class="header-navigation burger-open__navigation">
+    <ul class="header-navigation__list">
+        <li>
+            <a href="#" class="header-navigation__link_mobile">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a>
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a>
+                About us
+            </a>
+        </li>
+
+        <li>
+            <a>
+                Blog
+            </a>
+        </li>
+
+        <li>
+            <a>
+                Contacts
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+    <button class="btn-send-request burger-open__btn-request">
+    Send Request
+</button>
+
+    <div class="contact-block burger-open__contact-block">
     <div class="contact-block__inner">
         <ul class="contact-block__list-social">
             <li>
@@ -110,7 +171,7 @@
     </div>
 
     <div class="contact-block__select">
-        <label for="city"></label>
+        <label for="city">Select the city</label>
 
         <select name="city"
                 id="city">
@@ -162,52 +223,6 @@
     </div>
 </div>
 </div>
-
-            <div class="header__inner">
-                <nav class="header__navigation menu-desktop">
-    <ul>
-        <li>
-            <a>
-                Projects
-            </a>
-        </li>
-
-        <li>
-            <a>
-                About us
-            </a>
-        </li>
-
-        <li>
-            <a>
-                Blog
-            </a>
-        </li>
-
-        <li>
-            <a>
-                Contacts
-            </a>
-        </li>
-
-    </ul>
-</nav>
-
-                <div class="header__column">
-                    <div class="header__languages">
-                <span>
-                    En
-                </span>
-                    </div>
-
-                    <button class="header__btn-request">
-                        Send Request
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
 <section class="hero">
     <div class="hero__wrapper">
@@ -438,7 +453,7 @@
         </div>
 
         <div class="hero__inner">
-            <div class="contact-block">
+            <div class="contact-block hero__contact-block">
     <div class="contact-block__inner">
         <ul class="contact-block__list-social">
             <li>
@@ -468,7 +483,7 @@
     </div>
 
     <div class="contact-block__select">
-        <label for="city"></label>
+        <label for="city">Select the city</label>
 
         <select name="city"
                 id="city">
