@@ -2471,6 +2471,7 @@ button.btn-send-request {
 
   .hero__inner_pagination {
     top: auto;
+    left: auto;
     bottom: 47.92vw;
     right: 17.4vw;
   }
@@ -2794,6 +2795,7 @@ button.btn-send-request {
   }
 
   .hero__inner_proportions {
+    left: auto;
     top: auto;
     bottom: 140px;
     right: -13.6vw;
@@ -2892,6 +2894,7 @@ button.btn-send-request {
   }
 
   .hero__inner_proportions {
+    left: auto;
     bottom: auto;
     top: 109.3vw;
     right: -18.6vw;
