@@ -754,6 +754,7 @@ button.btn-send-request {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   padding-left: 154px;
+  margin-bottom: 42px;
 }
 
 .burger-open .header-navigation ul {
@@ -1689,6 +1690,7 @@ button.btn-send-request {
   background-color: #fff;
   cursor: pointer;
   pointer-events: auto;
+  z-index: 12;
 }
 
 .pop-up-request__cross span:first-of-type {
@@ -2128,6 +2130,7 @@ button.btn-send-request {
   width: 22px;
   height: 1px;
   background-color: #fff;
+  z-index: 12;
 }
 
 .pop-up-success__cross span:first-of-type {
@@ -2321,7 +2324,7 @@ body:not(.loading) .loading-content {
 }
 
 .hero__swiper img {
-  height: 744px;
+  height: 100vh;
   width: 100%;
 }
 
@@ -2339,7 +2342,7 @@ body:not(.loading) .loading-content {
 }
 
 .hero__inner_pagination {
-  top: 452px;
+  top: 60.75vh;
   left: auto;
   right: 173px;
   width: 274px;
@@ -2371,6 +2374,7 @@ body:not(.loading) .loading-content {
   font-weight: 700;
   line-height: 1.21;
   margin-bottom: 31px;
+  pointer-events: none;
 }
 
 .hero__pagination-progressbar {
@@ -3123,12 +3127,8 @@ body:not(.loading) .loading-content {
     display: none;
   }
 
-  .hero__swiper img {
-    height: 710px;
-  }
-
   .hero__inner {
-    top: 283px;
+    top: 39.86vh;
     left: 15.63vw;
   }
 
@@ -3138,7 +3138,7 @@ body:not(.loading) .loading-content {
   }
 
   .hero__inner_pagination {
-    top: 426px;
+    top: 60vh;
     right: 162px;
     left: auto;
     width: 236px;
@@ -3525,12 +3525,8 @@ body:not(.loading) .loading-content {
     left: 34px;
   }
 
-  .hero__swiper img {
-    height: 858px;
-  }
-
   .hero__inner {
-    top: 383px;
+    top: 39.94vh;
     left: 16.2vw;
   }
 
@@ -3540,8 +3536,8 @@ body:not(.loading) .loading-content {
 
   .hero__inner_pagination {
     top: auto;
+    bottom: 38.5vh;
     left: auto;
-    bottom: 47.92vw;
     right: 17.4vw;
   }
 
@@ -3958,12 +3954,8 @@ body:not(.loading) .loading-content {
     display: none;
   }
 
-  .hero__swiper img {
-    height: 542px;
-  }
-
   .hero__inner {
-    top: 221px;
+    top: 40.87vh;
     left: 6.4vw;
   }
 
@@ -3972,7 +3964,7 @@ body:not(.loading) .loading-content {
   }
 
   .hero__inner_pagination {
-    top: 142px;
+    top: 26.2vh;
     right: auto;
     bottom: auto;
     left: 40px;
