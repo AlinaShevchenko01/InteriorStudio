@@ -11,7 +11,7 @@
      by lightning-fast development of projects employing unique styles and architecture.">
     <title>Interior studio</title>
     <link rel="stylesheet"
-          href="css/index.min.css?_v=20250827152908">
+          href="css/index.min.css?_v=20250828160736">
 </head>
 
 <svg style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -105,7 +105,8 @@
                 </span>
                     </div>
 
-                    <button class="btn-send-request header__btn-request">
+                    <button class="btn-send-request header__btn-request"
+        data-send="request">
     Send Request
 </button>
                 </div>
@@ -149,7 +150,8 @@
     </ul>
 </nav>
 
-    <button class="btn-send-request burger-open__btn-request">
+    <button class="btn-send-request burger-open__btn-request"
+        data-send="request">
     Send Request
 </button>
 
@@ -1087,7 +1089,8 @@
                 Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
             </p>
 
-            <button class="btn-make-request @@class">
+            <button class="btn-make-request @@class"
+        data-send="request">
     Make request
 </button>
         </div>
@@ -1688,7 +1691,8 @@
 </ul>
         </div>
 
-        <button class="btn-make-request @@class">
+        <button class="btn-make-request @@class"
+        data-send="request">
     Make request
 </button>
 
@@ -1723,74 +1727,136 @@
     <div class="pop-up-request">
     <div class="pop-up-request__wrapper">
         <form class="pop-up-request__form form"
-        id="request__form">
+              id="request__form"
+              novalidate>
             <div class="form__inner">
                 <h3 class="form__title">
                     Calculate the cost of work
                 </h3>
 
+                <h3 class="form__title">
+                    Make request
+                </h3>
+
                 <div class="form__container">
                     <div class="form__group">
+                        <input id="name"
+                               name="userName"
+                               type="text"
+                               placeholder=" "
+                               required
+                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
+                        >
+
                         <label for="name">
                             Name
                         </label>
 
-                        <input id="name"
-                               name="userName"
-                               type="text"
-                        >
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
                     </div>
 
                     <div class="form__group">
+                        <input id="last-name"
+                               name="userLastName"
+                               type="text"
+                               placeholder=" "
+                               required
+                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
+                        >
+
                         <label for="last-name">
                             Last name
                         </label>
 
-                        <input id="last-name"
-                               name="userLastName"
-                               type="text"
-                        >
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
                     </div>
 
                     <div class="form__group">
+                        <input id="phone"
+                               name="userPhone"
+                               type="tel"
+                               placeholder=" "
+                               required
+                               pattern="^\+?[0-9\s-]{7,15}$"
+                        >
+
                         <label for="phone">
                             Phone
                         </label>
 
-                        <input id="phone"
-                               name="userPhone"
-                               type="tel"
-                        >
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Enter phone in international format, e.g. +380 67 123 45 67
+                        </span>
                     </div>
 
                     <div class="form__group">
+                        <input id="city"
+                               name="userCity"
+                               type="text"
+                               placeholder=" "
+                               required
+                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
+                        >
+
                         <label for="city">
                             Your city
                         </label>
 
-                        <input id="city"
-                               name="userCity"
-                               type="text"
-                        >
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
                     </div>
 
                     <div class="form__group">
+                        <input id="email"
+                               name="userEmail"
+                               type="email"
+                               placeholder=" "
+                               required
+                        >
+
                         <label for="email">
                             Email
                         </label>
 
-                        <input id="email"
-                               name="userEmail"
-                               type="email"
-                        >
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Please enter a valid email
+                        </span>
                     </div>
 
                     <div class="form__group form__group_select">
-                        <label for="property-type">
-                            Property type
-                        </label>
+                        <select id="property-type"
+                                required>
+                            <option value=""
+                                    disabled
+                                    selected
+                                    hidden>
+                            </option>
 
-                        <select id="property-type">
                             <option value="apartments">
                                 Apartments
                             </option>
@@ -1803,17 +1869,26 @@
                                 Townhouse
                             </option>
                         </select>
+
+                        <label for="property-type">
+                            Property type
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
                     </div>
 
                     <div class="form__group">
-                        <label for="comment">
-                            Your comment
-                        </label>
-
                         <input id="comment"
                                name="userComment"
                                type="text"
+                               placeholder=" "
                         >
+
+                        <label for="comment">
+                            Your comment
+                        </label>
                     </div>
                 </div>
             </div>
@@ -1823,7 +1898,113 @@
                     Area (m2)
                 </p>
 
-                <div class="form__btns"></div>
+                <div class="form__radio-btns">
+                    <label class="form__radio-btn">
+                        <input
+                        type="radio"
+                        name="area"
+                        value="to 50"
+                        checked
+                        required>
+
+                        <span class="form__radio-label">
+                            to 50
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="50-150">
+
+                        <span class="form__radio-label">
+                            50-150
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="150-250">
+
+                        <span class="form__radio-label">
+                            150-250
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="250-400">
+
+                        <span class="form__radio-label">
+                            250-400
+                        </span>
+
+                        <span class="form__radio-icon form__radio-icon_margin-small"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="400-600">
+
+                        <span class="form__radio-label">
+                            400-600
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="600-800">
+
+                        <span class="form__radio-label">
+                            600-800
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="800-1000">
+
+                        <span class="form__radio-label">
+                            800-1000
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="1000+">
+
+                        <span class="form__radio-label">
+                            1000+
+                        </span>
+
+                        <span class="form__radio-icon form__radio-icon_margin"></span>
+                    </label>
+                </div>
 
                 <div class="form__row">
                     <div class="form__add-file">
@@ -1832,7 +2013,9 @@
                                name="addFile">
 
                         <label for="file">
-
+                            <span class="form__add-plus">
+                                +
+                            </span>
                         </label>
 
                         <div class="form__file-text">
@@ -1862,6 +2045,12 @@
             </div>
         </form>
     </div>
+
+    <div class="pop-up-request__cross">
+        <span class="pop-up-request__cross-icons"></span>
+
+        <span class="pop-up-request__cross-icons"></span>
+    </div>
 </div>
 
     <div class="pop-up-success">
@@ -1882,9 +2071,9 @@
     </div>
 
     <div class="pop-up-success__cross">
-        <span></span>
+        <span class="pop-up-success__cross-icons"></span>
 
-        <span></span>
+        <span class="pop-up-success__cross-icons"></span>
     </div>
 </div>
 </div>
