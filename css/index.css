@@ -2776,10 +2776,6 @@ body:not(.loading) .loading-content {
   bottom: 1298px;
 }
 
-.about-philosophy__picture-absolute picture {
-  margin: 0;
-}
-
 .about-philosophy__statistic-container {
   margin-right: 5.28vw;
 }
@@ -3129,7 +3125,7 @@ body:not(.loading) .loading-content {
     margin: 6.9vw 0 12px;
   }
 
-  .about-philosophy__inner_info picture {
+  .about-philosophy__picture-room {
     max-width: 100%;
     margin-left: -5.14vw;
   }
@@ -3640,7 +3636,7 @@ body:not(.loading) .loading-content {
     margin-top: 100px;
   }
 
-  .about-philosophy__inner_info picture {
+  .about-philosophy__picture-room {
     margin: 0 auto;
   }
 
