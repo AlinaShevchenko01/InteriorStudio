@@ -11,7 +11,7 @@
      by lightning-fast development of projects employing unique styles and architecture.">
     <title>Interior studio projects</title>
     <link rel="stylesheet"
-          href="css/index.min.css?_v=20250903012241">
+          href="css/index.min.css?_v=20250904010149">
 </head>
 
 <svg style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -138,7 +138,7 @@
         </li>
 
         <li>
-            <a>
+            <a href="contacts.html">
                 Contacts
             </a>
         </li>
@@ -190,7 +190,7 @@
         </li>
 
         <li>
-            <a>
+            <a href="contacts.html">
                 Contacts
             </a>
         </li>
@@ -929,7 +929,7 @@
     </div>
 </div>
 
-    <div class="pop-up-request">
+    <dialog class="pop-up-request">
     <div class="pop-up-request__wrapper">
         <form class="pop-up-request__form form"
               id="request__form"
@@ -945,15 +945,13 @@
 
                 <div class="form__container">
                     <div class="form__group">
-                        <input id="name"
+                        <input id="userName"
                                name="userName"
                                type="text"
                                placeholder=" "
-                               required
-                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
                         >
 
-                        <label for="name">
+                        <label for="userName">
                             Name
                         </label>
 
@@ -967,15 +965,13 @@
                     </div>
 
                     <div class="form__group">
-                        <input id="last-name"
+                        <input id="userLastName"
                                name="userLastName"
                                type="text"
                                placeholder=" "
-                               required
-                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
                         >
 
-                        <label for="last-name">
+                        <label for="userLastName">
                             Last name
                         </label>
 
@@ -989,15 +985,13 @@
                     </div>
 
                     <div class="form__group">
-                        <input id="phone"
+                        <input id="userPhone"
                                name="userPhone"
                                type="tel"
                                placeholder=" "
-                               required
-                               pattern="^\+?[0-9\s-]{7,15}$"
                         >
 
-                        <label for="phone">
+                        <label for="userPhone">
                             Phone
                         </label>
 
@@ -1006,20 +1000,18 @@
                         </span>
 
                         <span class="form__error form__error_pattern">
-                           Enter phone in international format, e.g. +380 67 123 45 67
+                           Enter phone in international format
                         </span>
                     </div>
 
                     <div class="form__group">
-                        <input id="city"
+                        <input id="userCity"
                                name="userCity"
                                type="text"
                                placeholder=" "
-                               required
-                               pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]{2,30}$"
                         >
 
-                        <label for="city">
+                        <label for="userCity">
                             Your city
                         </label>
 
@@ -1033,14 +1025,13 @@
                     </div>
 
                     <div class="form__group">
-                        <input id="email"
+                        <input id="userEmail"
                                name="userEmail"
                                type="email"
                                placeholder=" "
-                               required
                         >
 
-                        <label for="email">
+                        <label for="userEmail">
                             Email
                         </label>
 
@@ -1059,7 +1050,8 @@
                             <option value=""
                                     disabled
                                     selected
-                                    hidden>
+                                    hidden
+                            >
                             </option>
 
                             <option value="apartments">
@@ -1085,13 +1077,13 @@
                     </div>
 
                     <div class="form__group">
-                        <input id="comment"
+                        <input id="userComment"
                                name="userComment"
                                type="text"
                                placeholder=" "
                         >
 
-                        <label for="comment">
+                        <label for="userComment">
                             Your comment
                         </label>
                     </div>
@@ -1109,8 +1101,7 @@
                         type="radio"
                         name="area"
                         value="to 50"
-                        checked
-                        required>
+                        >
 
                         <span class="form__radio-label">
                             to 50
@@ -1209,6 +1200,10 @@
 
                         <span class="form__radio-icon form__radio-icon_margin"></span>
                     </label>
+
+                    <span class="form__error form__error_required">
+                            This field is required
+                    </span>
                 </div>
 
                 <div class="form__row">
@@ -1251,35 +1246,40 @@
         </form>
     </div>
 
-    <div class="pop-up-request__cross">
-        <span class="pop-up-request__cross-icons"></span>
+    <div class="cross-close pop-up-request__cross-close">
+    <span class="cross-close__icons"></span>
 
-        <span class="pop-up-request__cross-icons"></span>
-    </div>
+    <span class="cross-close__icons"></span>
 </div>
+</dialog>
+
+
 
     <div class="pop-up-success">
-    <div class="pop-up-success__wrapper">
-        <h3 class="pop-up-success__title">
-            Thank you for your message!
-        </h3>
 
-        <p class="pop-up-success__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula.
-            Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
-        </p>
+        <div class="pop-up-success__wrapper">
+            <h3 class="pop-up-success__title">
+                Thank you for your message!
+            </h3>
 
-        <button class="pop-up-success__btn">
-            Send again
-        </button>
-    </div>
+            <p class="pop-up-success__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula.
+                Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+            </p>
 
-    <div class="pop-up-success__cross">
-        <span class="pop-up-success__cross-icons"></span>
+            <button class="pop-up-success__btn">
+                Send again
+            </button>
+        </div>
 
-        <span class="pop-up-success__cross-icons"></span>
-    </div>
+        <div class="cross-close pop-up-success__cross-close">
+    <span class="cross-close__icons"></span>
+
+    <span class="cross-close__icons"></span>
+</div>
+
+
 </div>
 </div>
 
