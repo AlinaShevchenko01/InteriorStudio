@@ -1896,6 +1896,7 @@ button.btn-send-request {
   border: none;
   border-bottom: 1px solid rgba(214, 214, 214, 0.3);
   cursor: pointer;
+  border-radius: 0;
   background-color: #fff;
 }
 
