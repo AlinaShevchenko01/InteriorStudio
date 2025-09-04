@@ -1426,6 +1426,11 @@ button.btn-send-request {
           transform: translateZ(0);
 }
 
+.header.active {
+  color: #fff;
+  background-color: #080808;
+}
+
 .header.scroll {
   background-color: rgba(8, 8, 8, 0.98);
 }
@@ -3605,6 +3610,11 @@ body:not(.loading) .loading-content {
     display: none;
   }
 
+  .header.scroll .btn-send-request:hover {
+    background-color: #fff;
+    color: #080808;
+  }
+
   .header-navigation__link_mobile {
     display: none;
   }
@@ -4085,8 +4095,9 @@ body:not(.loading) .loading-content {
   }
 
   .hero__inner_pagination {
-    top: 60vh;
-    right: 162px;
+    top: auto;
+    bottom: 37.46vh;
+    right: 15.82vw;
     left: auto;
     width: 236px;
     font-size: 12px;
@@ -4819,8 +4830,7 @@ body:not(.loading) .loading-content {
 
   .hero__inner_proportions {
     left: auto;
-    bottom: auto;
-    top: 80.9vw;
+    bottom: 180px;
     right: -15.6vw;
   }
 
@@ -5344,6 +5354,12 @@ body:not(.loading) .loading-content {
     margin-left: 22px;
   }
 
+  .form__group:nth-child(6) label {
+    -webkit-transform: translateX(2px) translateY(1px);
+        -ms-transform: translateX(2px) translateY(1px);
+            transform: translateX(2px) translateY(1px);
+  }
+
   .form__radio-label {
     font-size: 9px;
   }
@@ -5799,8 +5815,7 @@ body:not(.loading) .loading-content {
 
   .hero__inner_proportions {
     left: auto;
-    bottom: auto;
-    top: 109.3vw;
+    bottom: 150px;
     right: -18.6vw;
   }
 
