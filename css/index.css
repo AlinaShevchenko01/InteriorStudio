@@ -594,6 +594,82 @@ a {
   font-style: normal;
 }
 
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes openPopup {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(-20px);
+            transform: scale(0.9) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes openPopup {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(-20px);
+            transform: scale(0.9) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+}
+
+@-webkit-keyframes closePopup {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(-20px);
+            transform: scale(0.9) translateY(-20px);
+  }
+}
+
+@keyframes closePopup {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(-20px);
+            transform: scale(0.9) translateY(-20px);
+  }
+}
+
 .btn-discover {
   position: relative;
   font-size: 10px;
@@ -1120,7 +1196,7 @@ button.btn-send-request {
   position: absolute;
   width: 22px;
   height: 1px;
-  background-color: #fff;
+  background-color: #080808;
   cursor: pointer;
   pointer-events: auto;
   z-index: 12;
@@ -1760,7 +1836,6 @@ button.btn-send-request {
   -webkit-box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.04);
   padding: 56px 8.54vw;
-  overflow-y: auto;
 }
 
 .form {
@@ -2109,121 +2184,37 @@ button.btn-send-request {
           text-decoration-skip-ink: none;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes openPopup {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.9) translateY(-20px);
-            transform: scale(0.9) translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes openPopup {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.9) translateY(-20px);
-            transform: scale(0.9) translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-}
-
-@-webkit-keyframes closePopup {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: scale(0.9) translateY(-20px);
-            transform: scale(0.9) translateY(-20px);
-  }
-}
-
-@keyframes closePopup {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: scale(0.9) translateY(-20px);
-            transform: scale(0.9) translateY(-20px);
-  }
-}
-
 .pop-up-success {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11;
-  background-color: #080808;
-  -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
-  opacity: 0;
-  pointer-events: none;
+  padding: 0;
 }
 
-.pop-up-success.active {
-  -webkit-transform: translateX(0%);
-      -ms-transform: translateX(0%);
-          transform: translateX(0%);
-  pointer-events: auto;
-  opacity: 1;
+.pop-up-success[open] {
+  -webkit-animation: openPopup 0.4s ease-out forwards;
+          animation: openPopup 0.4s ease-out forwards;
+}
+
+.pop-up-success.closing {
+  -webkit-animation: closePopup 0.4s ease-out forwards;
+          animation: closePopup 0.4s ease-out forwards;
+}
+
+.pop-up-success::-ms-backdrop {
+  background-color: #080808;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pop-up-success::backdrop {
+  background-color: #080808;
+  -webkit-animation: fadeIn 0.3s ease-out;
+          animation: fadeIn 0.3s ease-out;
 }
 
 .pop-up-success__wrapper {
-  min-width: 68.94%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 68.94vw;
   color: #3a3e4b;
   text-align: center;
   background-color: #fff;
-  padding: 108px 12.6vw;
+  padding: 180px 12.6vw;
 }
 
 .pop-up-success__title {
@@ -3803,8 +3794,8 @@ body:not(.loading) .loading-content {
   }
 
   .cross-close {
-    top: 6.8vh;
-    right: 4.5vw;
+    top: 3vh;
+    right: 2vw;
   }
 
   .email__label {
@@ -4001,6 +3992,11 @@ body:not(.loading) .loading-content {
 
   .form__afterword {
     display: none;
+  }
+
+  .pop-up-success__wrapper {
+    width: 87.2vw;
+    padding: 108px 12.6vw;
   }
 
   .swiper-navigation {
@@ -4558,8 +4554,8 @@ body:not(.loading) .loading-content {
   }
 
   .cross-close {
-    top: 6.8vh;
-    right: 4.5vw;
+    top: 2vh;
+    right: 2vw;
   }
 
   .email {
@@ -4735,7 +4731,7 @@ body:not(.loading) .loading-content {
   }
 
   .pop-up-success__wrapper {
-    max-width: 520px;
+    width: 67.7vw;
     min-width: 67.7%;
     padding: 55px 34px;
   }
@@ -5098,11 +5094,6 @@ body:not(.loading) .loading-content {
     row-gap: 22px;
     margin-bottom: 26px;
   }
-
-  .pop-up-success__wrapper {
-    min-width: 87.2%;
-    padding: 40px 24px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -5194,11 +5185,6 @@ body:not(.loading) .loading-content {
             align-items: flex-end;
     gap: 6px;
     margin-right: 0;
-  }
-
-  .cross-close {
-    top: 3.5vh;
-    right: 7vw;
   }
 
   .footer__wrapper {
@@ -5360,6 +5346,11 @@ body:not(.loading) .loading-content {
 
   .form__radio-label {
     font-size: 9px;
+  }
+
+  .pop-up-success__wrapper {
+    width: 87.2vw;
+    padding: 40px 24px;
   }
 
   .main-about__wrapper {
