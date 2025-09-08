@@ -3529,7 +3529,7 @@ body:not(.loading) .loading-content {
 }
 
 .one-project-hero__bg img {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
