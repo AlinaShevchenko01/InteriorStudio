@@ -1,0 +1,22 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.contact-block-small {
+  a{
+    font-size: 11px;
+    font-weight: variables.$font-weight-semibold;
+    letter-spacing: 0.06em;
+  }
+
+  &__social {
+    max-width: 76px;
+    @include mixins.flex-between-center;
+    gap: 8px;
+    margin-top: 10px;
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-top: 4px;
+    }
+  }
+}

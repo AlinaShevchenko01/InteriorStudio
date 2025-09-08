@@ -1,0 +1,320 @@
+<dialog class="pop-up-request">
+    <div class="pop-up-request__wrapper">
+        <form class="pop-up-request__form form"
+              id="request__form"
+              novalidate>
+            <div class="form__inner">
+                <h3 class="form__title">
+                    Calculate the cost of work
+                </h3>
+
+                <h3 class="form__title">
+                    Make request
+                </h3>
+
+                <div class="form__container">
+                    <div class="form__group">
+                        <input id="userName"
+                               name="userName"
+                               type="text"
+                               placeholder=" "
+                        >
+
+                        <label for="userName">
+                            Name
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
+                    </div>
+
+                    <div class="form__group">
+                        <input id="userLastName"
+                               name="userLastName"
+                               type="text"
+                               placeholder=" "
+                        >
+
+                        <label for="userLastName">
+                            Last name
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
+                    </div>
+
+                    <div class="form__group">
+                        <input id="userPhone"
+                               name="userPhone"
+                               type="tel"
+                               placeholder=" "
+                        >
+
+                        <label for="userPhone">
+                            Phone
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Enter phone in international format
+                        </span>
+                    </div>
+
+                    <div class="form__group">
+                        <input id="userCity"
+                               name="userCity"
+                               type="text"
+                               placeholder=" "
+                        >
+
+                        <label for="userCity">
+                            Your city
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Only letters, more than 2
+                        </span>
+                    </div>
+
+                    <div class="form__group">
+                        <input id="userEmail"
+                               name="userEmail"
+                               type="email"
+                               placeholder=" "
+                        >
+
+                        <label for="userEmail">
+                            Email
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+
+                        <span class="form__error form__error_pattern">
+                           Please enter a valid email
+                        </span>
+                    </div>
+
+                    <div class="form__group form__group_select">
+                        <select id="property-type"
+                                required>
+                            <option value=""
+                                    disabled
+                                    selected
+                                    hidden
+                            >
+                            </option>
+
+                            <option value="apartments">
+                                Apartments
+                            </option>
+
+                            <option value="flat">
+                                Flat
+                            </option>
+
+                            <option value="townhouse">
+                                Townhouse
+                            </option>
+                        </select>
+
+                        <label for="property-type">
+                            Property type
+                        </label>
+
+                        <span class="form__error form__error_required">
+                            This field is required
+                        </span>
+                    </div>
+
+                    <div class="form__group">
+                        <input id="userComment"
+                               name="userComment"
+                               type="text"
+                               placeholder=" "
+                        >
+
+                        <label for="userComment">
+                            Your comment
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__inner">
+                <p class="form__area">
+                    Area (m2)
+                </p>
+
+                <div class="form__radio-btns">
+                    <label class="form__radio-btn">
+                        <input
+                        type="radio"
+                        name="area"
+                        value="to 50"
+                        >
+
+                        <span class="form__radio-label">
+                            to 50
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="50-150">
+
+                        <span class="form__radio-label">
+                            50-150
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="150-250">
+
+                        <span class="form__radio-label">
+                            150-250
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="250-400">
+
+                        <span class="form__radio-label">
+                            250-400
+                        </span>
+
+                        <span class="form__radio-icon form__radio-icon_margin-small"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="400-600">
+
+                        <span class="form__radio-label">
+                            400-600
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="600-800">
+
+                        <span class="form__radio-label">
+                            600-800
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="800-1000">
+
+                        <span class="form__radio-label">
+                            800-1000
+                        </span>
+
+                        <span class="form__radio-icon"></span>
+                    </label>
+
+                    <label class="form__radio-btn">
+                        <input
+                                type="radio"
+                                name="area"
+                                value="1000+">
+
+                        <span class="form__radio-label">
+                            1000+
+                        </span>
+
+                        <span class="form__radio-icon form__radio-icon_margin"></span>
+                    </label>
+
+                    <span class="form__error form__error_required">
+                            This field is required
+                    </span>
+                </div>
+
+                <div class="form__row">
+                    <div class="form__add-file">
+                        <input id="file"
+                               type="file"
+                               name="addFile">
+
+                        <label for="file">
+                            <span class="form__add-plus">
+                                +
+                            </span>
+                        </label>
+
+                        <div class="form__file-text">
+                            <p>
+                                Attach your file
+                            </p>
+
+                            <p>
+                                File size not more than 10 MB
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="form__btn-submit">
+                        Send Request
+                    </button>
+                </div>
+
+                <p class="form__afterword">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    <span>
+                        when looking
+                    </span>
+                    at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                    of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                </p>
+            </div>
+        </form>
+    </div>
+
+    @@include('../base/cross-close.html', {"class": "pop-up-request__cross-close"})
+</dialog>
+

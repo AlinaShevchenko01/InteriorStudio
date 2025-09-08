@@ -1,0 +1,70 @@
+@use "../../utils/variables" as variables;
+@use "../../utils/media" as media;
+@use "../../utils/mixins" as mixins;
+
+.contacts{
+  background-color: variables.$color-main-text;
+}
+
+.contacts-main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .footer__wrapper{
+    position: relative;
+    flex: 1 0 auto;
+    width: 100%;
+    padding: 25.27vh 54px 32px;
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 27.6vh 40px 32px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      padding: 34vh 32px 32px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      padding: 13vh 24px 32px;
+    }
+  }
+
+  .footer__title{
+    margin-bottom: 17px;
+  }
+
+  .footer__big-list{
+    margin-bottom: 64px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 56px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 46px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-bottom: 32px;
+    }
+  }
+
+  .footer-small{
+    margin-top: auto;
+    width: 100%;
+    background-color: variables.$color-main-text;
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 0 30px 16px;
+    }
+  }
+
+  .footer__topic-name{
+    display: none;
+  }
+
+  .main-contact-block-small{
+    bottom: auto;
+  }
+}

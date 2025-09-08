@@ -3,14 +3,30 @@
 @@include('html-partials/base/head.html', { "title": "Interior studio" })
 @@include('html-partials/base/symbol/sprite.html', {})
 
-<body>
-@@include('html-partials/base/header.html', {})
+<body class="loading">
+@@include('html-partials/base/preloader.html', {"class": ""})
 
-@@include('html-partials/pages/main/hero.html', {})
+<div class="loading-content">
+    @@include('html-partials/base/header.html', {})
 
-@@include('html-partials/pages/main/about.html', {})
+    <main>
+        @@include('html-partials/pages/main/hero.html', {})
 
-<!-- @@include('html-partials/pages/main/projects.html', {}) -->
+        @@include('html-partials/pages/main/about.html', {})
+
+        @@include('html-partials/pages/main/main-projects.html', {})
+
+        @@include('html-partials/base/collage.html', {})
+
+        @@include('html-partials/base/lorem.html', {})
+    </main>
+
+    @@include('html-partials/base/footer.html', {"class": "main-footer"})
+
+    @@include('html-partials/base/pop-up-request.html', {"class": ""})
+
+    @@include('html-partials/base/pop-up-success.html', {"class": ""})
+</div>
 
 <script
    src="js/index.min.js">

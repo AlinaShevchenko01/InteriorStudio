@@ -1,14 +1,15 @@
 import Swiper from "swiper";
-import {Pagination, Navigation} from "swiper/modules";
+import {Navigation} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-const progressBar = document.querySelector('.hero__pagination-fill-progressbar');
-const currentSlide = document.querySelector('.hero__pagination-slide-current');
-const totalSlides = document.querySelector('.hero__pagination-slide-total');
+import '../../base/swiper-pagination.js'
+import {
+    swiperProgressbarChangeSlide,
+    swiperProgressbarInit
+} from "../../base/swiper-pagination.js";
 
 const swiperHeroMain = new Swiper(".hero__swiper", {
-    modules: [Pagination, Navigation],
+    modules: [Navigation],
     loop: true,
     grabCursor: true,
     speed: 800,
@@ -34,26 +35,24 @@ const swiperHeroMain = new Swiper(".hero__swiper", {
 
 
     navigation: {
-        nextEl: '.hero__arrow_right',
-        prevEl: '.hero__arrow_left',
+        nextEl: '.hero__inner_pagination .swiper-navigation__arrow_right',
+        prevEl: '.hero__inner_pagination .swiper-navigation__arrow_left',
     },
 
     on: {
       init(swiper){
-          const realSlidesCount = swiper.el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length
-          totalSlides.textContent = String(realSlidesCount).padStart(2, "0");
-          currentSlide.textContent = String(swiper.realIndex + 1).padStart(2, "0");
-
-          const progress = ((swiper.realIndex + 1)/ realSlidesCount) * 100;
-          progressBar.style.width = `${progress}%`;
+          swiperProgressbarInit(swiper, {
+              currentSlide:  document.querySelector('.hero__inner_pagination .swiper-navigation__slide-current'),
+              totalSlides: document.querySelector('.hero__inner_pagination .swiper-navigation__slide-total'),
+              progressBar: document.querySelector('.hero__inner_pagination .swiper-navigation__fill-progressbar')
+          })
       },
 
       slideChange(swiper){
-          currentSlide.textContent = String(swiper.realIndex + 1).padStart(2, "0");
-
-          const realSlidesCount = swiper.el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length
-          const progress = ((swiper.realIndex + 1)/ realSlidesCount) * 100;
-          progressBar.style.width = `${progress}%`;
+         swiperProgressbarChangeSlide(swiper, {
+             currentSlide:  document.querySelector('.hero__inner_pagination .swiper-navigation__slide-current'),
+             progressBar: document.querySelector('.hero__inner_pagination .swiper-navigation__fill-progressbar')
+         })
       }
     }
 })

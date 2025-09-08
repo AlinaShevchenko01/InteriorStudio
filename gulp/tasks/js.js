@@ -11,9 +11,9 @@ export const js = () => {
 
         .pipe(webpack({
             mode: app.isBuild ? 'production' : 'development',
-            devtool: app.isBuild ? false : 'source-map', // уникає eval()
+            devtool: app.isBuild ? false : 'source-map',
             entry: {
-                main: app.path.src.js, // явна точка входу
+                main: app.path.src.js,
             },
             output: {
                 filename: 'index.min.js',

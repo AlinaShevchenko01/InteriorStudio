@@ -1,0 +1,40 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.email{
+  max-width: 382px;
+  @include mixins.flex-between-center;
+  padding-bottom: 3px;
+  border-bottom: 1px solid variables.$color-border7;
+
+  @include media.media-breakpoint-down-equal(sm){
+    max-width: 320px;
+  }
+
+
+  &__label{
+    font-size: 20px;
+    opacity: 0.7;
+
+    @include media.media-breakpoint-down-equal(md){
+      line-height: 1.7;
+      font-size: 16px;
+    }
+  }
+
+  input, button{
+    border: none;
+    background-color: transparent;
+  }
+
+  &__input{
+    font-family: variables.$font-family-main;
+  }
+
+
+
+  &__btn{
+    padding: 0;
+  }
+}

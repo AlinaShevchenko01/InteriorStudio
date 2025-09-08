@@ -1,0 +1,41 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.cross-close{
+  position: absolute;
+  top: 4.94vh;
+  right: 3vw;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  display: flex;
+
+  @include media.media-breakpoint-down-equal(md){
+    top: 3vh;
+    right: 2vw;
+  }
+
+  @include media.media-breakpoint-down-equal(sm){
+    top: 2vh;
+    right: 2vw;
+  }
+
+  span{
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    background-color: variables.$color-main-text;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 12;
+
+    &:first-of-type{
+      rotate: 45deg;
+    }
+
+    &:last-of-type{
+      rotate: -45deg;
+    }
+  }
+}

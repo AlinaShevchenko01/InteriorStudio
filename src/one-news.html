@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+@@include('html-partials/base/head.html', { "title": "One news" })
+@@include('html-partials/base/symbol/sprite.html', {})
+
+<body class="loading">
+
+@@include('html-partials/base/preloader.html', {"class": ""})
+
+<div class="loading-content">
+
+    @@include('html-partials/base/header.html', {"class": "white" })
+
+    <main>
+        @@include('html-partials/pages/one-news/one-news-hero.html', {})
+
+        @@include('html-partials/pages/one-news/one-news-latest.html', {})
+    </main>
+
+    @@include('html-partials/base/footer-small.html', {"class": "one-news-footer white"})
+
+    @@include('html-partials/base/pop-up-request.html', {"class": ""})
+
+    @@include('html-partials/base/pop-up-success.html', {"class": ""})
+</div>
+
+<script
+        src="js/index.min.js">
+</script>
+</body>
+</html>

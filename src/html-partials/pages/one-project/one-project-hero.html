@@ -1,0 +1,109 @@
+<section class="one-project-hero">
+    <div class="one-project-hero__wrapper">
+        {{> img-media
+        basePath='assets/img/one-project/one-project-hero/one-project-hero-photo1'
+        sizes=(array 375 768 1024 1440)
+        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+        lastSize=1440
+        imgType='png'
+        pictureClass='one-project-hero__bg'
+        loading='eager'
+        alt='room example - hall'
+        }}
+
+        <div class="one-project-hero__inner">
+            <h2 class="one-project-hero__title">
+                Residence <br> by the lighthouse
+            </h2>
+
+            <p class="one-project-hero__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere.
+                Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+            </p>
+
+            <div class="one-project-hero__container">
+                <div class="one-project-hero__data">
+                    <p class="one-project-hero__data-text">
+                        Lodz, Poland
+                    </p>
+
+                    <p class="one-project-hero__data-text">
+                        16.10.2018
+                    </p>
+
+                    <p class="one-project-hero__data-text">
+                        80 sq.m
+                    </p>
+                </div>
+
+                <div class="one-project-hero__icons">
+                    <svg class="one-project-hero__icon"
+                         width="16px"
+                         height="18px">
+                        <use xlink:href="#svg--main--maps-and-flags"></use>
+                    </svg>
+
+                    <svg class="one-project-hero__icon one-project-hero__icon_margin"
+                         width="16px"
+                         height="18px">
+                        <use xlink:href="#svg--one-project--calendar"></use>
+                    </svg>
+
+                    <svg class="one-project-hero__icon"
+                         width="16px"
+                         height="18px">
+                        <use xlink:href="#svg--one-project--ruler"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="one-project-hero__social">
+            <p class="one-project-hero__social-text">
+                Share:
+            </p>
+
+            <div class="one-project-hero__social-container">
+                <a href="https://www.facebook.com"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg class="one-project-hero__social-icon"
+                         width="24px"
+                         height="24px">
+                        <use xlink:href="#svg--one-project--facebook"></use>
+                    </svg>
+                </a>
+
+                <a href="https://twitter.com"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg class="one-project-hero__social-icon"
+                         width="24px"
+                         height="24px">
+                        <use xlink:href="#svg--one-project--twitter"></use>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg class="one-project-hero__social-icon"
+                         width="24px"
+                         height="24px">
+                        <use xlink:href="#svg--one-project--linkedin"></use>
+                    </svg>
+                </a>
+
+                <a href="https://www.google.com"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg class="one-project-hero__social-icon"
+                         width="24px"
+                         height="24px">
+                        <use xlink:href="#svg--one-project--share"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

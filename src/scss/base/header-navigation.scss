@@ -2,7 +2,7 @@
 @use "../utils/media" as media;
 @use "../utils/mixins" as mixins;
 
-.header__navigation{
+.header-navigation{
   flex: 1 1 30.37%;
   max-width: 338px;
 
@@ -26,6 +26,13 @@
       visibility: hidden;
       pointer-events: none;
 
+    }
+  }
+
+  &__link_mobile{
+
+    @include media.media-breakpoint-up(md){
+      display: none;
     }
   }
 }

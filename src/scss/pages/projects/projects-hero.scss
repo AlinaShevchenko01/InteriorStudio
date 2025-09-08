@@ -1,0 +1,157 @@
+@use "../../utils/variables" as variables;
+@use "../../utils/media" as media;
+@use "../../utils/mixins" as mixins;
+
+.projects-hero {
+
+  &__wrapper{
+    max-width: 1440px;
+    padding: 206px 64px 0 62px;
+    margin: 0 auto;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 1024px;
+      padding: 160px 55px 0 56px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      max-width: 768px;
+      padding: 137px 48px 0;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      max-width: 100%;
+      padding: 112px 24px 0;
+    }
+  }
+
+  &__inner{
+    max-width: 1044px;
+    @include mixins.flex-between;
+    gap: 40px;
+    margin: 0 auto 126px;
+
+    @include media.media-breakpoint-down-equal(md){
+      display: block;
+      margin: 0 0 104px 10vw;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 95px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin: 0 0 64px 0;
+    }
+  }
+
+  &__title{
+    margin-top: 6px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 17px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 16px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-bottom: 18px;
+    }
+  }
+
+  &__column{
+    max-width: 449px;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 448px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      max-width: 520px;
+    }
+  }
+
+  &__text{
+    margin-bottom: 34px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 32px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-bottom: 28px;
+    }
+  }
+
+  &__tabs-grid{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-areas:
+            ' a b'
+             'c c'
+             'd e'
+             'f f';
+
+    @include media.media-breakpoint-down-equal(md){
+      grid-gap: 6px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      grid-template-areas:
+            ' a'
+             'b'
+             'c'
+             'd'
+             'f'
+             'e';
+    }
+  }
+
+  &__tabs-item{
+    color: variables.$color-main-bg;
+    &:nth-child(1){
+      grid-area: a;
+    }
+
+    &:nth-child(2){
+      grid-area: b;
+    }
+
+    &:nth-child(3){
+      grid-area: c;
+    }
+
+    &:nth-child(4){
+      grid-area: d;
+    }
+
+    &:nth-child(5){
+      grid-area: e;
+    }
+
+    &:nth-child(6){
+      grid-area: f;
+    }
+
+    img{
+      max-width: 100%;
+    }
+
+    .main-projects__description {
+
+      @include media.media-breakpoint-down-equal(sm){
+        padding: 30px 32px 28px 30px;
+      }
+
+      @include media.media-breakpoint-down-equal(xs){
+        padding: 22px 22px 19px 24px;
+      }
+    }
+
+    .main-projects__title-room{
+      max-width: 100%;
+    }
+  }
+}

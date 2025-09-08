@@ -1,0 +1,177 @@
+@use "../../utils/variables" as variables;
+@use "../../utils/media" as media;
+@use "../../utils/mixins" as mixins;
+
+.one-project-hero{
+
+  &__wrapper{
+    position: relative;
+    color: variables.$color-main-bg;
+  }
+
+  &__bg{
+    img{
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__inner{
+    position: absolute;
+    top: 31.45vh;
+    left: 9.2vw;
+    padding: 32px 64px;
+
+    @include media.media-breakpoint-down-equal(md){
+      top: 28.8vh;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      top: 35.2vh;
+      padding: 32px 6.77vw;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      top: 14vh;
+      left: 0;
+      padding: 32px 5.87vw;
+    }
+  }
+
+  &__title{
+    margin-bottom: 26px;
+
+    @include media.media-breakpoint-up(md){
+      br{
+        display: none;
+      }
+    }
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 300px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 24px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text{
+    max-width: 454px;
+    font-weight: variables.$font-weight-regular;
+    margin-bottom: 9.27vh;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 7.7vh;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 38px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      max-width: 327px;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__container{
+    max-width: 337px;
+  }
+
+  &__data{
+    max-width: 310px;
+    @include mixins.flex-between-center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: variables.$font-weight-semibold;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    opacity: 0.7;
+    margin-left: auto;
+
+    @include media.media-breakpoint-down-equal(xs){
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 29px;
+      margin-left: 28px;
+    }
+  }
+
+  &__icons{
+    max-width: 276px;
+    @include mixins.flex-between-center;
+    gap: 8px;
+    margin-top: 24px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-top: -16px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 22px;
+      margin-top: -96px;
+    }
+  }
+
+  &__icon{
+    color: variables.$color-bg1;
+  }
+
+  &__icon_margin{
+    margin-left: 18px;
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-left: 0;
+    }
+  }
+
+  &__social{
+    position: absolute;
+    bottom: 5.2vh;
+    left: 2.92vw;
+    width: 276px;
+    @include mixins.flex-between-center;
+    gap: 8px;
+
+    @include media.media-breakpoint-down-equal(md){
+      bottom: 4.6vh;
+      left: 5.5vw;
+      width: 225px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      bottom: 3.2vh;
+      left: 6.2vw;
+      width: 197px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      bottom: 4.6vh;
+      left: 6.3vw;
+      width: 181px;
+    }
+  }
+
+  &__social-text{
+    font-weight: variables.$font-weight-medium;
+  }
+
+  &__social-container{
+    max-width: 121px;
+    @include mixins.flex-between-center;
+    gap: 8px;
+  }
+
+  a{
+    max-height: 24px;
+  }
+}

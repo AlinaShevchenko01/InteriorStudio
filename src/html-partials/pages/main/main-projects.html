@@ -12,28 +12,22 @@
         </p>
 
         <div class="main-projects__inner">
-            <div class="main-projects__example">
-                    <div class="main-projects__description">
-                        @@include('../../base/main-projects-info.html', {})
 
-                        <div class="main-projects__container">
-                            <h3 class="main-projects__title-room">
-                                Residence by the lighthouse
-                            </h3>
-
-                            @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover"})
-                        </div>
-                    </div>
-
-                    {{> img-media
-                    basePath='assets/img/main/section3-projects/section3-project-photo1'
-                    sizes=(array 375 768 1024 1440)
-                    mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
-                    lastSize=1440
-                    imgType='png'
-                    alt='room example - Eyewear store interior'
-                    }}
-                </div>
+            @@include('../../base/room-examples.html', {
+            "class": "main-projects__example",
+            "data-link": "one-project",
+            "class-description": "main-projects__description",
+            "class-container": "main-projects__container",
+            "class-title": "main-projects__title-room",
+            "title-room": "Residence by the lighthouse",
+            "picture": "{{> img-media\
+            basePath='assets/img/main/section3-projects/section3-project-photo1'\
+            sizes=(array 375 768 1024 1440)\
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+            lastSize=1440\
+            imgType='png'\
+            alt='room example - Eyewear store interior'}}"
+            })
 
             <div class="main-projects__example main-projects__example_mobile">
                 <div class="main-projects__description">
@@ -44,102 +38,80 @@
                             Eyewear store interior
                         </h3>
 
-                        @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover"})
+                        @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover", "text": "Discover more"})
                     </div>
                 </div>
 
-                <picture>
-                    <source type="image/webp"
-                    srcset="@assets/img/main/section3-projects/section3-project-photo6-375.webp">
-                    <img src="@assets/img/main/section3-projects/section3-project-photo6-375.png"
-                    alt="Eyewear store interior"
-                    loading="lazy">
-                </picture>
+                {{> img-format
+                basePath='assets/img/main/section3-projects/section3-project-photo6-375'
+                imgType='png'
+                isWebp=true
+                alt='room example - Minimalist style home'
+                }}
             </div>
 
-                <div class="main-projects__example">
-                    <div class="main-projects__description">
-                        @@include('../../base/main-projects-info.html', {})
+            @@include('../../base/room-examples.html', {
+            "class": "main-projects__example",
+            "data-link": "one-project",
+            "class-description": "main-projects__description",
+            "class-container": "main-projects__container",
+            "class-title": "main-projects__title-room",
+            "title-room": "Minimalist style home",
+            "picture": "{{> img-media\
+            basePath='assets/img/main/section3-projects/section3-project-photo2'\
+            sizes=(array 375 768 1024 1440)\
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+            lastSize=1440\
+            imgType='png'\
+            alt='room example - Minimalist style home'}}"
+            })
 
-                        <div class="main-projects__container">
-                            <h3 class="main-projects__title-room">
-                                Minimalist style home
-                            </h3>
+            @@include('../../base/room-examples.html', {
+            "class": "main-projects__example  main-projects__example_big",
+            "data-link": "one-project",
+            "class-description": "main-projects__description",
+            "class-container": "main-projects__container",
+            "class-title": "main-projects__title-room",
+            "title-room": "Residence by the lighthouse",
+            "picture": "{{> img-media\
+            basePath='assets/img/main/section3-projects/section3-project-photo3'\
+            sizes=(array 375 768 1024 1440)\
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+            lastSize=1440\
+            imgType='png'\
+            alt='room example - Minimalist style home'}}"
+            })
 
-                            @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover"})
-                        </div>
-                    </div>
+            @@include('../../base/room-examples.html', {
+            "class": "main-projects__example",
+            "data-link": "one-project",
+            "class-description": "main-projects__description",
+            "class-container": "main-projects__container",
+            "class-title": "main-projects__title-room",
+            "title-room": "House on a Hillside",
+            "picture": "{{> img-media\
+            basePath='assets/img/main/section3-projects/section3-project-photo4'\
+            sizes=(array 375 768 1024 1440)\
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+            lastSize=1440\
+            imgType='png'\
+            alt='room example - House on a Hillside'}}"
+            })
 
-                    {{> img-media
-                    basePath='assets/img/main/section3-projects/section3-project-photo2'
-                    sizes=(array 375 768 1024 1440)
-                    mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
-                    lastSize=1440
-                    imgType='png'
-                    alt='room example - Minimalist style home'
-                    }}
-                </div>
+            <div class="main-projects__more-examples">
+                <h3 class="main-projects__title-see">
+                    See more 60 projects
+                </h3>
 
-                <div class="main-projects__example  main-projects__example_big">
-                    <div class="main-projects__description">
-                        @@include('../../base/main-projects-info.html', {})
-
-                        <div class="main-projects__container">
-                            <h3 class="main-projects__title-room">
-                                Residence by the lighthouse
-                            </h3>
-
-                            @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover"})
-                        </div>
-                    </div>
-
-                    {{> img-media
-                    basePath='assets/img/main/section3-projects/section3-project-photo3'
-                    sizes=(array 375 768 1024 1440)
-                    mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
-                    lastSize=1440
-                    imgType='png'
-                    alt='room example - Residence by the lighthouse'
-                    }}
-                </div>
-
-                <div class="main-projects__example">
-                    <div class="main-projects__description">
-                        @@include('../../base/main-projects-info.html', {})
-
-                        <div class="main-projects__container">
-                            <h3 class="main-projects__title-room">
-                                House on a Hillside
-                            </h3>
-
-                            @@include('../../base/btn-discover.html', {"class": "main-projects__btn-discover"})
-                        </div>
-                    </div>
-
-                    {{> img-media
-                    basePath='assets/img/main/section3-projects/section3-project-photo4'
-                    sizes=(array 375 768 1024 1440)
-                    mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
-                    lastSize=1440
-                    imgType='png'
-                    alt='room example - Eyewear store interior'
-                    }}
-                </div>
-
-                <div class="main-projects__more-examples">
-                    <h3 class="main-projects__title-see">
-                        See more 60 projects
-                    </h3>
-
-                    {{> img-media
-                    basePath='assets/img/main/section3-projects/section3-project-photo5'
-                    sizes=(array 375 768 1024 1440)
-                    mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
-                    lastSize=1440
-                    imgType='png'
-                    alt='room example - hall'
-                    }}
-                </div>
+                {{> img-media
+                basePath='assets/img/main/section3-projects/section3-project-photo5'
+                sizes=(array 375 768 1024 1440)
+                mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                lastSize=1440
+                imgType='png'
+                alt='room example - hall'
+                }}
             </div>
+        </div>
     </div>
 </section>

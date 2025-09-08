@@ -1,0 +1,139 @@
+<section class="projects-hero">
+    <div class="projects-hero__wrapper">
+        <div class="projects-hero__inner">
+            <h2 class="projects-hero__title">
+                Our Projects
+            </h2>
+
+            <div class="projects-hero__column">
+                <p class="projects-hero__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula.
+                    Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                </p>
+
+                @@include('../../base/menu-tabs.html', { "class": "projects-hero__menu-tabs",
+                "text1": "House",
+                "text2": "Apartments",
+                "text3": "Commerce",
+                "text4": "Architecture"})
+            </div>
+        </div>
+
+        <div class="projects-hero__tabs-pages">
+            <div class="projects-hero__tabs-page">
+                <div class="projects-hero__tabs-grid">
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Eyewear store interior",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/main/section3-projects/section3-project-photo1'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        alt='room example - Eyewear store interior'}}"
+                        })
+                    </div>
+
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Minimalist style home",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/main/section3-projects/section3-project-photo2'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        loading='eager'\
+                        alt='room example - Minimalist style home'}}"
+                        })
+                    </div>
+
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example  main-projects__example_big",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Minimalist style home",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/projects/projects-hero/project-hero-photo3'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        loading='eager'\
+                        alt='room example - Minimalist style home'}}"
+                        })
+                    </div>
+
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Minimalist style home",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/projects/projects-hero/project-hero-photo4'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        alt='room example - Minimalist style home'}}"
+                        })
+                    </div>
+
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Minimalist style home",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/projects/projects-hero/project-hero-photo5'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        alt='room example - Minimalist style home'}}"
+                        })
+                    </div>
+
+                    <div class="projects-hero__tabs-item">
+                        @@include('../../base/room-examples.html', {
+                        "class": "main-projects__example  main-projects__example_big",
+                        "data-link": "one-project",
+                        "class-description": "main-projects__description",
+                        "class-container": "main-projects__container",
+                        "class-title": "main-projects__title-room",
+                        "title-room": "Minimalist style home",
+                        "picture": "{{> img-media\
+                        basePath='assets/img/projects/projects-hero/project-hero-photo6'\
+                        sizes=(array 375 768 1024 1440)\
+                        mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')\
+                        lastSize=1440\
+                        imgType='png'\
+                        alt='room example - Minimalist style home'}}"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

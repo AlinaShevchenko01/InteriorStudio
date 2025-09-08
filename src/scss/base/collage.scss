@@ -1,0 +1,237 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.collage{
+  background-color: variables.$color-main-text;
+  color: variables.$color-main-bg;
+
+
+  &__wrapper{
+    position: relative;
+    max-width: 1154px;
+    @include mixins.flex-between;
+    gap: 32px;
+    padding: 178px 54px 180px;
+    margin: 0 auto;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 519px;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+      padding: 140px 32px 142px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      padding: 122px 32px 126px;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      align-items: flex-start;
+      text-align: left;
+      gap: 22px;
+      padding: 96px 23px 96px 25px;
+    }
+  }
+
+  &__title{
+    max-width: 424px;
+    line-height: 1.42;
+    max-height: 160px;
+    z-index: 2;
+    pointer-events: none;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 362px;
+      z-index: 1;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      max-width: 290px;
+      line-height: 1.21;
+    }
+  }
+
+  &__column{
+    max-width: 339px;
+    z-index: 2;
+    margin-top: 178px;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 455px;
+      z-index: 1;
+      margin-top: 0;
+    }
+  }
+
+  &__text{
+    pointer-events: none;
+    margin-bottom: 44px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 66px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 51px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container{
+    position: absolute;
+    top: 290px;
+  }
+
+  &__photo{
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+
+    @include media.media-breakpoint-down-equal(md){
+      display: none;
+    }
+
+    &:nth-child(1){
+      top: 6px;
+      left: 152px;
+      transform: rotate(-6deg);
+    }
+
+    &:nth-child(2){
+      top: -4px;
+      left: 206px;
+    }
+
+    &:nth-child(3){
+      top: -18px;
+      left: 256px;
+      transform: rotate(-6deg);
+    }
+
+    &:nth-child(4){
+      top: -40px;
+      left: 313px;
+      transform: rotate(-2deg);
+    }
+
+    &:nth-child(5){
+      top: -72px;
+      left: 377px;
+      transform: rotate(-11deg);
+    }
+
+    &:nth-child(6){
+      top: -85px;
+      left: 416px;
+      transform: rotate(-6deg);
+    }
+
+    &:nth-child(7){
+      top: -96px;
+      left: 468px;
+    }
+
+    &:nth-child(8){
+      top: -109px;
+      left: 520px;
+      transform: rotate(-6deg);
+    }
+
+    &:nth-child(9){
+      top: -132px;
+      left: 577px;
+      transform: rotate(-2deg);
+    }
+
+    &:nth-child(10){
+      top: -164px;
+      left: 643px;
+      transform: rotate(-11deg);
+    }
+
+    &:hover{
+      transform: scale(1.1) rotate(0);
+      z-index: 3;
+    }
+  }
+
+  &__topic-name{
+    top: 230px;
+    left: -8.2vw;
+
+    @include media.media-breakpoint-down-equal(md){
+      display: none;
+    }
+  }
+
+  &.white{
+    background-color: variables.$color-main-bg;
+    color: variables.$color-main-text;
+
+    .collage__wrapper{
+      padding-bottom: 174px;
+
+      @include media.media-breakpoint-down-equal(md){
+        padding: 122px 32px;
+      }
+
+       @include media.media-breakpoint-down-equal(sm){
+         padding: 102px 32px;
+       }
+
+      @include media.media-breakpoint-down-equal(xs){
+        gap: 12px;
+        padding: 99px 23px 96px 25px;
+      }
+    }
+
+    .topic-name{
+      display: none;
+
+      @include media.media-breakpoint-down-equal(md){
+        display: block;
+        top: 160px;
+        left: -22.65vw;
+
+        &::before{
+          right: 100px;
+        }
+      }
+
+      @include media.media-breakpoint-down-equal(sm){
+        top: 140px;
+        left: -14.84vw;
+      }
+
+      @include media.media-breakpoint-down-equal(xs){
+        display: none;
+      }
+    }
+
+    .collage__title{
+      @include media.media-breakpoint-down-equal(sm){
+        max-width: 100%;
+      }
+
+      @include media.media-breakpoint-down-equal(xxs){
+        max-width: 290px;
+      }
+    }
+
+    .btn-make-request{
+      border: 1px solid rgba(0, 0, 0, 0.32);
+    }
+  }
+
+  &.no-topic{
+    .topic-name{
+      display: none;
+    }
+  }
+}

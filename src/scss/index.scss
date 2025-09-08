@@ -6,21 +6,57 @@
 @use "utils/variables" as variables;
 @use "utils/media" as media;
 @use "utils/mixins" as mixins;
+@use "utils/keyframes" as keyframes;
 
 @use "base/btn-discover";
 @use "base/btn-make-request";
+@use "base/btn-send-request";
 @use "base/burger";
+@use "base/burger-open";
 @use "base/collage";
 @use "base/contact-block";
+@use "base/contact-block-small";
+@use "base/cross-close";
+@use "base/email";
 @use "base/footer";
 @use "base/footer-small";
 @use "base/header";
 @use "base/header-navigation";
 @use "base/lorem";
+@use "base/menu-tabs";
+@use "base/pop-up-request";
+@use "base/pop-up-success";
+@use "base/preloader";
+@use "base/swiper-pagination";
 @use "base/topic-name";
 
 @use "pages/main/about";
 @use "pages/main/hero";
-@use "pages/main/projects";
+@use "pages/main/main-projects";
+
+@use "pages/about/about-hero";
+@use "pages/about/about-philosophy";
+@use "pages/about/about-work";
+
+@use "pages/projects/projects-hero";
+
+@use "pages/news/news-hero";
+@use "pages/news/news-footer";
+
+@use "pages/not-found/not-found";
+
+@use "pages/one-news/one-news-hero";
+@use "pages/one-news/one-news-latest";
+
+@use "pages/one-project/one-project-hero";
+@use "pages/one-project/one-project-main";
+@use "pages/one-project/one-project-proportions";
+
+@use "pages/contacts/contacts";
+
+
+
+
+
 
 

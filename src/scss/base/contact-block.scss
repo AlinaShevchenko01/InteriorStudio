@@ -54,6 +54,19 @@
     width: 117px;
     transition: transform 0.3s ease;
 
+    label{
+      position: absolute;
+      left: -100vw;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      pointer-events: none;
+      white-space: nowrap;
+      border: 0;
+    }
+
     select{
       width: 100%;
       font-size: 11px;
@@ -154,5 +167,9 @@
       gap: 6px;
       margin-right: 0;
     }
+  }
+
+  a{
+    color: variables.$color-main-bg;
   }
 }

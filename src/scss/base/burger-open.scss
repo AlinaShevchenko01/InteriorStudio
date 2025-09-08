@@ -1,0 +1,105 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.burger-open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  @include mixins.flex-column;
+  justify-content: space-between;
+  overflow-y: auto;
+  background-color: variables.$color-burger-bg;
+  padding: 216px 30px 40px 57px;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: 4;
+  pointer-events: none;
+
+  @include media.media-breakpoint-down-equal(sm){
+    padding: 35.16vh 3.9vw 32px 6.12vw;
+  }
+
+  @include media.media-breakpoint-down-equal(xs){
+    padding: 156px 5.8vw 22px 6.12vw;
+  }
+
+  &.active{
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .header-navigation{
+    flex: 1 1 100%;
+    padding-left: 154px;
+    margin-bottom: 42px;
+
+    @include media.media-breakpoint-down-equal(sm){
+      padding-left: 18.75vw;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      padding-left: 0;
+    }
+
+    ul{
+      @include mixins.flex-column;
+      align-items: flex-start;
+      gap: 38px;
+
+      @include media.media-breakpoint-down-equal(xs){
+        gap: 30px;
+      }
+
+      @include media.media-breakpoint-down-equal(xxs){
+        align-items: center;
+      }
+
+      a{
+        font-size: 32px;
+        font-weight: variables.$font-weight-bold;
+        color: variables.$color-main-bg;
+        line-height: 1;
+        opacity: 0.5;
+        letter-spacing: 0;
+
+        @include media.media-breakpoint-down-equal(xs){
+          font-size: 26px;
+        }
+
+        &:active{
+          opacity: 1;
+        }
+      }
+    }
+
+    @include media.media-breakpoint-up(md){
+      display: none;
+    }
+  }
+
+  .contact-block{
+    @include media.media-breakpoint-up(md){
+      display: none;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      max-width: 100vw;
+      width: 100%;
+    }
+  }
+
+  .btn-send-request{
+    @include media.media-breakpoint-up(xs){
+      display: none;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      display: block;
+      max-width: 80%;
+      margin: 0 auto 98px;
+    }
+  }
+}

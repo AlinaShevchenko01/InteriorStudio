@@ -21,7 +21,7 @@ export const scss = () => {
         .pipe(sass({
             outputStyle: 'expanded',
         }))
-        .pipe(app.plugins.replace(/@assets\//g, '../assets/'))
+        .pipe(app.plugins.replace(/@assets\//g, app.isBuild ? '/InteriorStudio/assets/' : '../assets/'))
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -29,13 +29,10 @@ export const scss = () => {
             )
         )
         .pipe(
-            app.plugins.if(
-                app.isBuild,
                 webpcss({
                     webpClass: '.webp',
                     noWebpClass: '.no-webp',
                 })
-            )
         )
         .pipe(
             app.plugins.if(
@@ -47,15 +44,11 @@ export const scss = () => {
                 })
             )
         )
-        .pipe(app.plugins.if(
-            app.isBuild,
-            app.plugins.replace(/url\(\s*(['"]?)(\/assets\/)/g, 'url($1/InteriorStudio/')
-        ))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
             app.plugins.if(
                 app.isBuild,
-                cleanCss()
+                cleanCss({ compatibility: 'ie8' })
             )
         )
         .pipe(rename({

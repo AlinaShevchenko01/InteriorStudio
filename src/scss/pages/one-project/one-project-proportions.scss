@@ -1,0 +1,57 @@
+@use "../../utils/variables" as variables;
+@use "../../utils/media" as media;
+@use "../../utils/mixins" as mixins;
+
+.one-project-proportions{
+  background-color: variables.$color-main-text;
+
+  &__wrapper{
+    max-width: 1440px;
+    padding: 0 64px 120px;
+    margin: 0 auto;
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 0 56px 100px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      padding: 0 48px 80px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      padding: 0 24px 60px;
+    }
+  }
+
+  &__text{
+    max-width: 92px;
+    color: variables.$color-secondary-text;
+    font-size: 8px;
+    font-weight: variables.$font-weight-bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 auto 18px;
+  }
+
+  &__title{
+    max-width: 371px;
+    color: variables.$color-main-bg;
+    margin: 0 auto 132px;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 330px;
+      margin-bottom: 48px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      max-width: 268px;
+    }
+  }
+
+  img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+}

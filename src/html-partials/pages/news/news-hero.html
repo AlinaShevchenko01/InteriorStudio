@@ -1,0 +1,165 @@
+<section class="news-hero">
+    <div class="news-hero__wrapper">
+        <div class="news-hero__container">
+            <div class="news-hero__title-container">
+                <h2 class="news-hero__title">
+                    Our latest news
+                </h2>
+
+                <h2 class="news-hero__title news-hero__title_mobile">
+                    Our news
+                </h2>
+            </div>
+
+            @@include('../../base/menu-tabs.html', { "class": "news-hero__menu-tabs",
+            "text1": "All",
+            "text2": "Blog",
+            "text3": "News",
+            "text4": "Advice from the designer"})
+        </div>
+
+        <div class="news-hero__inner">
+            <div class="news-hero__grid"
+                 data-grid="Blog">
+                <div class="news-hero__grid-inner news-hero__grid-inner_description">
+                    <p class="news-hero__grid-title">
+                        5 smart tips for productive collaboration with the designer
+                    </p>
+
+                    <p class="news-hero__grid-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod.
+                        Nam tempus pellentesque ligula ut aliquam.
+                    </p>
+
+                    @@include('../../base/btn-discover.html', {"class": "news-hero__btn-discover black",
+                    "text": "Discover more"})
+                </div>
+
+                <div class="news-hero__grid-inner">
+                    {{> img-media
+                    basePath='assets/img/news/news-hero/news-hero-photo1'
+                    sizes=(array 375 768 1024 1440)
+                    mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                    lastSize=1440
+                    imgType='png'
+                    loading='eager'
+                    alt='room example - hall'
+                    pictureClass='news-hero__picture-full'
+                    }}
+
+                    {{> img-format
+                    basePath='assets/img/news/news-hero/news-hero-photo1-mobile'
+                    imgType='png'
+                    isWebp=true
+                    loading='eager'
+                    alt='room example - Minimalist style home'
+                    pictureClass='news-hero__picture-mobile'
+                    }}
+                </div>
+            </div>
+
+            <div class="news-hero__grid"
+                 data-grid="News">
+                <h3 class="news-hero__title-image">
+                    Non-standard plinth options
+                </h3>
+
+                {{> img-media
+                basePath='assets/img/news/news-hero/news-hero-photo2'
+                sizes=(array 375 768 1024 1440)
+                mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                lastSize=1440
+                imgType='png'
+                loading='eager'
+                alt='room example - hall'
+                }}
+            </div>
+
+            <div class="news-hero__grid"
+                 data-grid="News">
+                <h3 class="news-hero__title-image">
+                    Interior design, LCD Rybalsky
+                </h3>
+
+                {{> img-media
+                basePath='assets/img/news/news-hero/news-hero-photo3'
+                sizes=(array 375 768 1024 1440)
+                mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                lastSize=1440
+                imgType='png'
+                alt='room example - hall'
+                }}
+            </div>
+
+            <div class="news-hero__grid"
+                 data-grid="Advice from the designer">
+                <div class="news-hero__grid-inner">
+                    {{> img-media
+                    basePath='assets/img/news/news-hero/news-hero-photo1'
+                    sizes=(array 375 768 1024 1440)
+                    mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                    lastSize=1440
+                    imgType='png'
+                    alt='room example - hall'
+                    }}
+                </div>
+
+                <div class="news-hero__grid-inner news-hero__grid-inner_description">
+                    <p class="news-hero__grid-title news-hero__grid-title_tablet">
+                        5 smart tips for productive collaboration with the designer
+                    </p>
+
+                    <p class="news-hero__grid-text news-hero__grid-text_tablet">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod.
+                        Nam tempus pellentesque ligula ut aliquam.
+                    </p>
+
+                    @@include('../../base/btn-discover.html', {"class": "news-hero__btn-discover black",
+                    "text": "Discover more"})
+                </div>
+            </div>
+        </div>
+
+        <div class="news-hero__navigation">
+            <span class="news-hero__navigation-arrow news-hero__navigation-arrow_left">
+                <svg
+                     width="14px"
+                     height="14px">
+                    <use xlink:href="#svg--news--arrow-right"></use>
+                </svg>
+            </span>
+
+            <div class="news-hero__navigation-container">
+                <span class="news-hero__navigation-item">
+                01
+            </span>
+
+                <span class="news-hero__navigation-item">
+                02
+            </span>
+
+                <span class="news-hero__navigation-item">
+                03
+            </span>
+
+                <span class="news-hero__navigation-item">
+                ...
+            </span>
+
+                <span class="news-hero__navigation-item">
+                15
+            </span>
+            </div>
+
+            <span class="news-hero__navigation-arrow news-hero__navigation-arrow_right">
+                <svg
+                     width="14px"
+                     height="14px">
+                    <use xlink:href="#svg--news--arrow-right"></use>
+                </svg>
+            </span>
+        </div>
+    </div>
+</section>

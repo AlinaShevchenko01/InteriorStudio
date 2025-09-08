@@ -13,7 +13,7 @@
     }
 
     @include media.media-breakpoint-down-equal(sm){
-      padding: 108px 16.145vw 104px;
+      padding: 108px 16.145vw 96px;
     }
 
     @include media.media-breakpoint-down-equal(xs){
@@ -36,31 +36,6 @@
 
       @include media.media-breakpoint-down-equal(xs){
         max-width: 100%;
-      }
-    }
-
-    &:last-of-type{
-      position: relative;
-      max-width: 76.25vw;
-      @include mixins.flex-between-start;
-      gap: 32px;
-      margin-top: 258px;
-
-      @include media.media-breakpoint-down-equal(md){
-        max-width: 74.29vw;
-        margin-top: 186px;
-      }
-
-      @include media.media-breakpoint-down-equal(sm){
-        max-width: 520px;
-        margin-top: 200px;
-      }
-
-      @include media.media-breakpoint-down-equal(xs){
-        max-width: 100%;
-        flex-direction: column;
-        gap: 0;
-        margin-top: 194px;
       }
     }
   }
@@ -102,6 +77,31 @@
       @include media.media-breakpoint-down-equal(sm){
         margin-bottom: 26px;
       }
+    }
+  }
+
+  &__container{
+    position: relative;
+    max-width: 76.25vw;
+    @include mixins.flex-between-start;
+    gap: 32px;
+    margin-top: 258px;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 74.29vw;
+      margin-top: 186px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      max-width: 520px;
+      margin-top: 200px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      max-width: 100%;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 194px;
     }
   }
 

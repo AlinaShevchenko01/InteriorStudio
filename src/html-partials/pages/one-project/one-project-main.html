@@ -1,0 +1,71 @@
+<section class="one-project-main">
+    <div class="one-project-main__wrapper">
+        <div class="one-project-main__inner">
+            <h3 class="one-project-main__title">
+                Donec et ipsum nec quam posuere maximus eu in erat. Duis laoreet finibus consectetur.
+            </h3>
+
+            <p class="one-project-main__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna.
+                Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula
+                ut aliquam. Donec et ipsum nec quam posuere maximus eu in erat. Duis laoreet finibus
+                consectetur. Nullam pulvinar ex sit amet leo gravida, sed mattis enim vehicula.
+                Duis purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor
+                suscipit arcu. Aenean leo est, rutrum a eleifend eget, tempor nec urna. Proin
+                finibus lobortis arcu dictum convallis. Ut fermentum eu magna vel laoreet.
+                In lacus augue, malesuada id elit sit amet, varius imperdiet ex. Nullam blandit
+                lobortis posuere:
+            </p>
+
+            @@include('../../base/btn-discover.html', {"class": "one-project-main__btn-discover black", "text": "discover more"})
+        </div>
+
+        <div class="one-project-main__container">
+            {{> img-media
+            basePath='assets/img/one-project/one-project-main/one-project-main-photo1'
+            sizes=(array 375 768 1024 1440)
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+            lastSize=1440
+            imgType='png'
+            pictureClass='one-project-main__picture'
+            alt='room example - hall'
+            }}
+
+            <div class="one-project-main__row">
+            {{> img-media
+            basePath='assets/img/one-project/one-project-main/one-project-main-photo2'
+            sizes=(array 375 768 1024 1440)
+            mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+            lastSize=1440
+            imgType='png'
+            pictureClass='one-project-main__picture'
+            alt='room example - hall'
+            }}
+
+            {{> img-media
+            basePath='assets/img/one-project/one-project-main/one-project-main-photo3'
+            sizes=(array 375 768 1024 1440)
+            mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+            lastSize=1440
+            imgType='png'
+            pictureClass='one-project-main__picture'
+            alt='room example - hall'
+            }}
+            </div>
+
+            {{> img-media
+            basePath='assets/img/one-project/one-project-main/one-project-main-photo4'
+            sizes=(array 375 768 1024 1440)
+            mediaQueries=(array '(max-width: 375px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+            lastSize=1440
+            imgType='png'
+            pictureClass='one-project-main__picture'
+            alt='room example - hall'
+            }}
+        </div>
+
+        <button class="one-project-main__btn-view">
+            View more photo
+        </button>
+    </div>
+</section>

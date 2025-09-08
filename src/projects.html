@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+@@include('html-partials/base/head.html', { "title": "Projects" })
+@@include('html-partials/base/symbol/sprite.html', {})
+
+<body class="loading">
+
+@@include('html-partials/base/preloader.html', {"class": ""})
+
+<div class="loading-content">
+
+    @@include('html-partials/base/header.html', {"class": "white" })
+
+    <main>
+        @@include('html-partials/pages/projects/projects-hero.html', {})
+
+        @@include('html-partials/base/collage.html', {"class": "white"})
+    </main>
+
+    @@include('html-partials/base/footer-small.html', {"class": "projects-footer white"})
+
+    @@include('html-partials/base/pop-up-request.html', {"class": ""})
+
+    @@include('html-partials/base/pop-up-success.html', {"class": ""})
+</div>
+
+<script
+        src="js/index.min.js">
+</script>
+</body>
+</html>

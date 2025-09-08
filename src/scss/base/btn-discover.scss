@@ -33,18 +33,6 @@
     background-color: variables.$color-bg2;
   }
 
-  &:hover{
-    backdrop-filter: blur(2px);
-    box-shadow: inset 0 -0px 0px 0 variables.$color-box-shadow1, 0 1px 1px 0 variables.$color-box-shadow2;
-    background: variables.$color-bg1;
-
-    @include media.media-breakpoint-down-equal(md){
-      background: transparent;
-      backdrop-filter: none;
-      box-shadow: none;
-    }
-  }
-
   &:active{
     color: variables.$color-main-text;
   }

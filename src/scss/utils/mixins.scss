@@ -7,13 +7,18 @@
 @mixin flex-between-start {
   display: flex;
   justify-content: space-between;
-  align-items: self-start;
+  align-items: flex-start;
 }
 
 @mixin flex-between-end {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 @mixin flex-column {

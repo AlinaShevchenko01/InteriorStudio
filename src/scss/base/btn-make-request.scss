@@ -1,0 +1,21 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.btn-make-request {
+  font-size: 11px;
+  font-weight: variables.$font-weight-bold;
+  letter-spacing: 0.06em;
+  color: variables.$color-main-text;
+  background-color: variables.$color-main-bg;
+  border: none;
+  padding: 17px 48px;
+
+  @include media.media-breakpoint-down-equal(md){
+    padding: 14px 48px 13px;
+  }
+
+  &:active{
+    background-color: variables.$color-border;
+  }
+}

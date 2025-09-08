@@ -9,6 +9,45 @@
   width: 100%;
   z-index: 10;
   background-color: transparent;
+  transform: translateZ(0);
+
+  &.active{
+    color: variables.$color-main-bg;
+    background-color: variables.$color-main-text;
+
+  }
+
+  &.scroll{
+    background-color: variables.$color-burger-bg;
+
+    a{
+      color: variables.$color-main-bg;
+    }
+
+    .btn-send-request{
+      color: variables.$color-main-bg;
+      border: 1px solid variables.$color-border;
+
+      @include media.media-breakpoint-up(md){
+        &:hover{
+          background-color: variables.$color-main-bg;
+          color: variables.$color-main-text;
+        }
+      }
+    }
+
+    .header__languages{
+      color: variables.$color-main-bg;
+    }
+
+    .burger__menu{
+      color: variables.$color-main-bg;
+    }
+
+    .burger__icon span{
+      background-color: variables.$color-main-bg;
+    }
+  }
 
   &__wrapper{
     max-width: 1440px;
@@ -20,6 +59,7 @@
     letter-spacing: 0.06em;
     padding: 24px 64px 24px 62px;
     margin: 0 auto;
+    transition: transform 0.3s ease;
 
     @include media.media-breakpoint-down-equal(md){
       max-width: 1024px;
@@ -35,12 +75,36 @@
       max-width: 375px;
       padding: 20px 24px;
     }
+
+    &.active{
+      a{
+        color: variables.$color-main-bg;
+      }
+
+      .header__btn-request{
+        color: variables.$color-main-bg;
+        border: 1px solid variables.$color-border;
+      }
+
+      .header__languages{
+        color: variables.$color-main-bg;
+      }
+
+      .burger__menu{
+        color: variables.$color-main-bg;
+      }
+
+      .burger__icon span{
+        background-color: variables.$color-main-bg;
+      }
+    }
   }
 
   &__logo{
     font-size: 14px;
     font-weight: variables.$font-weight-regular;
     letter-spacing: 0.3em;
+    color: variables.$color-main-bg;
     text-transform: uppercase;
   }
 
@@ -90,21 +154,47 @@
     }
   }
 
-  &__btn-request{
-    font-weight: variables.$font-weight-semibold;
-    font-size: 11px;
-    letter-spacing: 0.06em;
+  a{
     color: variables.$color-main-bg;
-    background-color: transparent;
-    border: 1px solid variables.$color-border;
-    padding: 16px 3.26vw;
+  }
+}
+
+.white{
+  background-color: variables.$color-main-bg;
+
+  .header__wrapper{
 
     @include media.media-breakpoint-down-equal(md){
-      padding: 13px 34px 13px 35px;
+      padding: 33px 56px 25px 54px;
     }
 
-    @include media.media-breakpoint-down-equal(xs){
-      display: none;
+    @include media.media-breakpoint-down-equal(sm){
+      padding: 25px 50px 25px 54px;
     }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      padding: 20px 24px;
+    }
+  }
+
+  a{
+    color: variables.$color-main-text;
+  }
+
+ .header__btn-request{
+  color: variables.$color-main-text;
+  border: 1px solid variables.$color-border4;
+ }
+
+  .header__languages{
+    color: variables.$color-main-text;
+  }
+
+  .burger__menu{
+    color: variables.$color-main-text;
+  }
+
+  .burger__icon span{
+    background-color: variables.$color-main-text;
   }
 }

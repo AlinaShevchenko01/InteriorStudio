@@ -12,15 +12,15 @@
     margin: 0 auto;
 
     @include media.media-breakpoint-down-equal(md){
-      padding: 128px 56px 140px;
+      padding: 128px 56px 0;
     }
 
     @include media.media-breakpoint-down-equal(sm){
-      padding: 108px 48px 122px;
+      padding: 108px 48px 0;
     }
 
     @include media.media-breakpoint-down-equal(xs){
-      padding: 84px 26px 96px 22px;
+      padding: 84px 26px 0 22px;
     }
   }
 
@@ -145,19 +145,20 @@
     justify-content: space-between;
     opacity: 0;
     transition: opacity 0.5s ease;
+    cursor: pointer;
     padding: 32px 32px 34px 32px;
 
     @include media.media-breakpoint-down-equal(md){
       opacity: 1;
-      padding: 30px 32px 32px 30px;
+      padding: 30px 32px 28px 30px;
     }
 
-    @include media.media-breakpoint-down-equal(md){
+    @include media.media-breakpoint-down-equal(sm){
       padding: 30px 32px 36px 30px;
     }
 
     @include media.media-breakpoint-down-equal(xs){
-      padding: 22px 22px 22px 24px;
+      padding: 22px 22px 19px 24px;
     }
 
     @include media.media-breakpoint-up(md){
@@ -179,8 +180,12 @@
     @include mixins.flex-column;
     gap: 24px;
 
+    @include media.media-breakpoint-down-equal(md){
+      gap: 20px;
+    }
+
     @include media.media-breakpoint-down-equal(xs){
-      gap: 10px;
+      gap: 6px;
     }
   }
 

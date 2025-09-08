@@ -1,0 +1,35 @@
+<footer class="news-footer">
+    {{> img-media
+    basePath='assets/img/news/news-footer/news-footer-photo'
+    sizes=(array 375 768 1024 1440)
+    mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+    lastSize=1440
+    imgType='png'
+    alt='room example - hall'
+    pictureClass='news-footer__bg'
+    }}
+
+    <div class="news-footer__wrapper">
+        <div class="news-footer__inner">
+            <p class="news-footer__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <div class="news-footer__container">
+                <p class="news-footer__description news-footer__description_full">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper
+                    eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.
+                </p>
+
+                <p class="news-footer__description news-footer__description_mobile">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris
+                    vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                </p>
+
+                @@include('../../base/email.html', {})
+            </div>
+        </div>
+
+        @@include('../../base/footer-small.html', {"class": "news-footer__footer-small"})
+    </div>
+</footer>

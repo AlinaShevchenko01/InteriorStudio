@@ -1,8 +1,9 @@
-<header class="header">
+<header class="header @@class">
     <div class="header__wrapper">
-        <p class="header__logo">
+        <a class="header__logo"
+           href="index.html">
             Logo
-        </p>
+        </a>
 
         <div class="header__container">
             <div class="header__burger burger">
@@ -28,11 +29,12 @@
                 </span>
                     </div>
 
-                    <button class="header__btn-request">
-                        Send Request
-                    </button>
+                    @@include('btn-send-request.html',
+                    { "class": "header__btn-request"})
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+@@include('burger-open.html', { })

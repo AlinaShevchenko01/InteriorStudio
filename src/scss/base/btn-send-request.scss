@@ -1,0 +1,30 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+button.btn-send-request{
+  font-weight: variables.$font-weight-semibold;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: variables.$color-main-bg;
+  background-color: transparent;
+  border: 1px solid variables.$color-border;
+  padding: 16px 3.26vw;
+  transition: background-color, color .4s ease;
+
+  @include media.media-breakpoint-down-equal(md){
+    padding: 13px 34px 13px 35px;
+  }
+
+  @include media.media-breakpoint-down-equal(xs){
+    display: none;
+  }
+
+  @include media.media-breakpoint-up(md){
+    &:hover{
+      color: variables.$color-main-text;
+      background-color: variables.$color-main-bg;
+      filter: invert(0);
+    }
+  }
+}

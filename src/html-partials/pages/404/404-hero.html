@@ -1,0 +1,19 @@
+<section class="not-found-hero">
+    <div class="not-found-hero__wrapper">
+        <h2 class="not-found-hero__title">
+            Page not found
+        </h2>
+
+        <p class="not-found-hero__text">
+            Something went wrong. Page not found
+        </p>
+
+        @@include('../../base/btn-discover.html',
+        {"class": "not-found-hero__btn-discover",
+        "text": "go to main"})
+    </div>
+
+    @@include('../../base/topic-name.html',
+    { "class": "not-found-hero__topic-name",
+    "text": "404" })
+</section>

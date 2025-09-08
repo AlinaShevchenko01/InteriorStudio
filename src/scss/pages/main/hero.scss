@@ -8,41 +8,29 @@
 
   &__swiper{
     img{
-      height: 744px;
+      height: 100vh;
       width: 100%;
-
-      @include media.media-breakpoint-down-equal(md){
-        height: 710px;
-      }
-
-      @include media.media-breakpoint-down-equal(sm){
-        height: 959px;
-      }
-
-      @include media.media-breakpoint-down-equal(xs){
-        height: 542px;
-      }
     }
   }
 
   &__inner{
     position: absolute;
-    top: 280px;
+    top: 37.63vh;
     left: 18.26vw;
     z-index: 2;
 
     @include media.media-breakpoint-down-equal(md){
-      top: 283px;
+      top: 39.86vh;
       left: 15.63vw;
     }
 
     @include media.media-breakpoint-down-equal(sm){
-      top: 383px;
+      top: 39.94vh;
       left: 16.2vw;
     }
 
     @include media.media-breakpoint-down-equal(xs){
-      top: 221px;
+      top: 40.87vh;
       left: 6.4vw;
     }
 
@@ -67,30 +55,33 @@
   }
 
   &__inner_pagination{
-    top: 452px;
+    top: 60.75vh;
     left: auto;
     right: 173px;
     width: 274px;
-    z-index: 10;
+    z-index: 3;
     @include mixins.flex-between-center;
     gap: 13px;
     font-size: 11px;
 
     @include media.media-breakpoint-down-equal(md){
-      top: 426px;
-      right: 162px;
+      top: auto;
+      bottom: 37.46vh;
+      right: 15.82vw;
+      left: auto;
       width: 236px;
       font-size: 12px;
     }
 
     @include media.media-breakpoint-down-equal(sm){
-      top: auto;
-      bottom: 47.92vw;
+      top:auto;
+      bottom: 38.5vh;
+      left: auto;
       right: 17.4vw;
     }
 
     @include media.media-breakpoint-down-equal(xs){
-      top: 142px;
+      top: 26.2vh;
       right: auto;
       bottom: auto;
       left: 40px;
@@ -112,25 +103,28 @@
     rotate: -90deg;
 
     @include media.media-breakpoint-down-equal(md){
+      top: auto;
+      left: auto;
       bottom: 154px;
       right: -7.6vw;
     }
 
     @include media.media-breakpoint-down-equal(sm){
-      bottom: auto;
-      top: 93.9vw;
+      left: auto;
+      bottom: 180px;
       right: -15.6vw;
     }
 
     @include media.media-breakpoint-down-equal(xs){
+      left: auto;
       top: auto;
       bottom: 140px;
       right: -13.6vw;
     }
 
     @include media.media-breakpoint-down-equal(xxs){
-      bottom: auto;
-      top: 109.3vw;
+      left: auto;
+      bottom: 150px;
       right: -18.6vw;
     }
   }
@@ -141,6 +135,7 @@
     font-weight: variables.$font-weight-bold;
     line-height: 1.21;
     margin-bottom: 31px;
+    pointer-events: none;
 
     @include media.media-breakpoint-down-equal(md){
       max-width: 440px;
@@ -159,31 +154,6 @@
       line-height: 1;
       margin-bottom: 27px;
     }
-  }
-
-  &__pagination-progressbar{
-    position: relative;
-    width: 186px;
-    height: 1px;
-    background-color: variables.$color-progressbar;
-  }
-
-  &__pagination-fill-progressbar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    width: 0;
-    background-color: variables.$color-main-bg;
-    transition: width 0.8s ease;
-  }
-
-  &__arrow{
-    cursor: pointer;
-  }
-
-  &__arrow_right{
-    rotate: 180deg;
   }
 
   &__text{

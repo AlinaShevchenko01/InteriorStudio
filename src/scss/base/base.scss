@@ -16,6 +16,10 @@ body{
   @include media.media-breakpoint-down-equal(md){
     font-size: 14px;
   }
+
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
 
 *, *::before, *::after {
@@ -48,10 +52,40 @@ h3{
 }
 
 button{
+  transition: filter 0.2s ease;
   font-family: variables.$font-family-main;
+
+  @include media.media-breakpoint-up(md){
+    &:hover{
+      filter: invert(80%);
+    }
+  }
 }
 
 a{
+  display: inline-block;
+  transition: filter 0.2s ease;
   text-decoration: none;
   cursor: pointer;
+
+  @include media.media-breakpoint-up(md){
+    &:hover{
+      filter: invert(80%);
+    }
+  }
+}
+
+.title{
+  font-size: 36px;
+  font-weight: variables.$font-weight-bold;
+  color: variables.$color-main-bg;
+  line-height: 1.2;
+
+  @include media.media-breakpoint-down-equal(md){
+    font-size: 32px;
+  }
+
+  @include media.media-breakpoint-down-equal(xs){
+    font-size: 26px;
+  }
 }

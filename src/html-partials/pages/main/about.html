@@ -19,13 +19,20 @@
                 associated with the 1940's? No problem!
             </p>
 
-            @@include('../../base/btn-discover.html', { "class": "black" })
+            @@include('../../base/btn-discover.html', { "class": "black", "text": "Discover more"})
         </div>
 
-        <div class="main-about__inner">
-            <picture class="main-about__picture-static">
-                <img src="@assets/img/main/section2-about/1440/section2-about-photo3.png" alt="room">
-            </picture>
+        <div class="main-about__container">
+            <div class="main-about__picture-static">
+                {{> img-media
+                basePath='assets/img/main/section2-about/section2-about-photo3'
+                sizes=(array 375 768 1024 1440)
+                mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                lastSize=1440
+                imgType='png'
+                alt='room example - hall'
+                }}
+            </div>
 
             <p class="main-about__quotation">
             <span>
@@ -39,22 +46,30 @@
             </p>
 
             <div class="main-about__img">
-                <picture>
-                    <img src="@assets/img/main/section2-about/1440/section2-about-photo2.png" alt="room">
-                </picture>
+                {{> img-media
+                basePath='assets/img/main/section2-about/section2-about-photo2'
+                sizes=(array 375 768 1024 1440)
+                mediaQueries=(array '(max-width: 575px)' '(max-width: 768px)' '(max-width: 1024px)' '(min-width: 1025px)')
+                lastSize=1440
+                imgType='png'
+                alt='room example - hall'
+                }}
             </div>
         </div>
 
-        <picture class="main-about__picture-box">
-            <img src="@assets/img/main/section2-about/1440/section2-about-photo1.png" alt="room">
-        </picture>
+        <div class="main-about__picture-box">
+            {{> img-media
+            basePath='assets/img/main/section2-about/section2-about-photo1'
+            sizes=(array 1024 1440)
+            mediaQueries=(array '(max-width: 1024px)' '(min-width: 1025px)')
+            lastSize=1440
+            imgType='png'
+            alt='room example - hall'
+            }}
+        </div>
 
-        <p class="main-about__topic-name topic-name">
-            About
-        </p>
+        @@include('../../base/topic-name.html', { "class": "main-about__topic-name", "text": "About" })
 
-        <p class="main-about__topic-name topic-name">
-            Ceo company
-        </p>
+        @@include('../../base/topic-name.html', { "class": "main-about__topic-name", "text": "Ceo company" })
     </div>
 </section>

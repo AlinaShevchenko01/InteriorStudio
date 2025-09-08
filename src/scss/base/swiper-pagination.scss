@@ -1,0 +1,73 @@
+@use "../utils/variables" as variables;
+@use "../utils/media" as media;
+@use "../utils/mixins" as mixins;
+
+.swiper-navigation{
+  width: 274px;
+
+  @include media.media-breakpoint-down-equal(md){
+    width: 236px;
+    font-size: 12px;
+  }
+
+  &__progressbar{
+    position: relative;
+    display: inline-block;
+    width: 186px;
+    height: 1px;
+    background-color: variables.$color-progressbar;
+  }
+
+  &__fill-progressbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: variables.$color-main-bg;
+    transition: width 0.8s ease;
+  }
+
+  &__arrow path{
+    background-color: variables.$color-main-bg;
+  }
+
+  &__arrow{
+    cursor: pointer;
+  }
+
+  &__arrow_right{
+    rotate: 180deg;
+  }
+
+  &.gray{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 316px;
+    color: variables.$color-secondary-text;
+
+    @include media.media-breakpoint-down-equal(xxs){
+      width: 260px;
+    }
+
+    .swiper-navigation__progressbar{
+      width: 227px;
+      background-color: variables.$color-progressbar2;
+
+      @include media.media-breakpoint-down-equal(xxs){
+        width: 180px;
+      }
+    }
+
+    .swiper-navigation__fill-progressbar{
+      background-color: variables.$color-secondary-text;
+      opacity: 0.5;
+    }
+
+    .swiper-navigation__slide-current,
+    .swiper-navigation__slide-total{
+      opacity: 0.5;
+    }
+  }
+}

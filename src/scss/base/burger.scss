@@ -32,13 +32,18 @@
     }
 
     &.active{
+      margin: 2px 0 0 4px;
+
+      @include media.media-breakpoint-down-equal(sm){
+        margin-left: -8px;
+      }
       span{
         &:first-of-type{
-          transform: rotate(45deg) translateY(12px) scale(1.6);
+          transform: rotate(45deg) translateY(5px);
         }
 
         &:last-of-type{
-          transform: rotate(-45deg) translateY(-12px) scale(1.6);
+          transform: rotate(-45deg) translateY(-5px);
         }
       }
     }
@@ -46,6 +51,10 @@
 
   &__menu{
     @include media.media-breakpoint-down-equal(xs){
+      display: none;
+    }
+
+    &.active{
       display: none;
     }
   }
