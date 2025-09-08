@@ -813,7 +813,7 @@ button.btn-send-request {
           justify-content: space-between;
   overflow-y: auto;
   background-color: rgba(8, 8, 8, 0.98);
-  padding: 216px 30px 40px 57px;
+  padding: 28.16vh 30px 40px 57px;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -5503,7 +5503,7 @@ body:not(.loading) .loading-content {
   }
 
   .burger-open {
-    padding: 156px 5.8vw 22px 6.12vw;
+    padding: 23.39vh 5.8vw 22px 6.12vw;
   }
 
   .burger-open .header-navigation {
