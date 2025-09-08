@@ -5143,6 +5143,7 @@ body:not(.loading) .loading-content {
   }
 
   .hero__inner_proportions {
+    top: auto;
     left: auto;
     bottom: 180px;
     right: -15.6vw;
@@ -6268,7 +6269,8 @@ body:not(.loading) .loading-content {
 
   .hero__inner_proportions {
     left: auto;
-    bottom: 150px;
+    bottom: auto;
+    top: 109vw;
     right: -18.6vw;
   }
 
