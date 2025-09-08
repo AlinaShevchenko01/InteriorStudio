@@ -1,0 +1,255 @@
+@use "../../utils/variables" as variables;
+@use "../../utils/media" as media;
+@use "../../utils/mixins" as mixins;
+
+.main-projects{
+  background-color: variables.$color-main-text;
+
+  &__wrapper{
+    max-width: 1440px;
+    color: variables.$color-main-bg;
+    padding: 144px 64px 0 62px;
+    margin: 0 auto;
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 128px 56px 140px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      padding: 108px 48px 122px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      padding: 84px 26px 96px 22px;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    margin-bottom: 34px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 26px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 24px;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      text-align: left;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__text{
+    max-width: 449px;
+    text-align: center;
+    color: variables.$color-secondary-text;
+    margin: 0 auto 132px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-bottom: 114px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-bottom: 96px;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      text-align: left;
+      margin-bottom: 78px;
+    }
+  }
+
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+
+    @include media.media-breakpoint-down-equal(md){
+      gap: 6px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      gap: 6px;
+    }
+
+    @include media.media-breakpoint-down-equal(xxs){
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 6px;
+    }
+  }
+
+  &__example{
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__example_big{
+    grid-area: 2/1/3/3;
+
+    @include media.media-breakpoint-down-equal(sm){
+      grid-area: auto;
+    }
+
+    .main-projects__container{
+      @include mixins.flex-between-end;
+      flex-direction: row;
+
+      @include media.media-breakpoint-down-equal(sm){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .main-projects__description{
+      padding: 30px 146px 28px 32px;
+
+      @include media.media-breakpoint-down-equal(xs){
+        padding: 22px 22px 22px 24px;
+      }
+    }
+
+    .main-projects__title-room{
+      max-width: 194px;
+    }
+
+    .main-projects__info{
+      max-width: 160px;
+    }
+
+    .main-projects__btn-discover{
+      padding-bottom: 4px;
+    }
+  }
+
+  &__example_mobile{
+    display: none;
+    @include media.media-breakpoint-down-equal(xxs){
+      display: block;
+    }
+  }
+
+  &__description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include mixins.flex-column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 32px 32px 34px 32px;
+
+    @include media.media-breakpoint-down-equal(md){
+      opacity: 1;
+      padding: 30px 32px 32px 30px;
+    }
+
+    @include media.media-breakpoint-down-equal(md){
+      padding: 30px 32px 36px 30px;
+    }
+
+    @include media.media-breakpoint-down-equal(xs){
+      padding: 22px 22px 22px 24px;
+    }
+
+    @include media.media-breakpoint-up(md){
+      &:hover{
+        opacity: 1;
+        z-index: 3;
+        box-shadow: inset 0 0 260px 0 rgba(0, 0, 0, 0.7);
+      }
+
+      &:hover + picture img{
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+
+  &__container{
+    margin-top: auto;
+    @include mixins.flex-column;
+    gap: 24px;
+
+    @include media.media-breakpoint-down-equal(xs){
+      gap: 10px;
+    }
+  }
+
+  &__info{
+    max-width: 160px;
+    @include mixins.flex-between-center;
+    gap: 24px;
+    font-size: 10px;
+    line-height: 1.71;
+
+    @include media.media-breakpoint-down-equal(md){
+      max-width: 176px;
+      gap: 18px;
+      font-size: 11px;
+      font-weight: variables.$font-weight-medium;
+      line-height: 1.7;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      max-width: 160px;
+      gap: 16px;
+    }
+  }
+
+  &__title-room{
+    @include media.media-breakpoint-down-equal(md){
+      color: variables.$color-text3;
+    }
+  }
+
+  &__btn-discover{
+    display: none;
+
+    @include media.media-breakpoint-down-equal(md){
+      display: block;
+    }
+  }
+
+  &__more-examples{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background-color: variables.$color-main-bg;
+
+    @include media.media-breakpoint-down-equal(xs){
+      gap: 16px;
+
+       picture img{
+        max-width: 121px;
+      }
+    }
+  }
+
+  &__title-see{
+    color: variables.$color-main-text;
+    margin-top: -50px;
+
+    @include media.media-breakpoint-down-equal(md){
+      margin-top: -53px;
+    }
+
+    @include media.media-breakpoint-down-equal(sm){
+      margin-top: 0;
+    }
+  }
+
+  img{
+  max-width: 100%;
+  }
+}
