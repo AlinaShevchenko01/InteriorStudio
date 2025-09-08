@@ -3364,6 +3364,48 @@ body:not(.loading) .loading-content {
   color: white;
 }
 
+.no-webp .not-found {
+  background: url("/InteriorStudio/assets/img/main/footer/footer-bg-1440.png") no-repeat center/cover; }
+
+.not-found {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.not-found .footer-small {
+  width: 100%;
+  padding-bottom: 18px;
+  margin-top: auto;
+}
+
+.not-found-hero__wrapper {
+  position: absolute;
+  top: 35.27vh;
+  left: 13.89vw;
+  padding: 64px;
+}
+
+.not-found-hero__title {
+  margin-bottom: 18px;
+}
+
+.not-found-hero__text {
+  opacity: 0.7;
+  margin-bottom: 34px;
+}
+
+.not-found-hero__topic-name {
+  top: 43.63vh;
+  left: 4.17vw;
+}
+
 .one-news-hero__wrapper {
   position: relative;
   max-width: 1440px;
@@ -4601,6 +4643,19 @@ body:not(.loading) .loading-content {
     display: block;
   }
 
+  .no-webp .not-found {
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-1024.png") no-repeat center/cover; }
+
+  .not-found-hero__wrapper {
+    top: 33.9vh;
+    left: 14.2vw;
+  }
+
+  .not-found-hero__topic-name {
+    top: 43vh;
+    left: 5vw;
+  }
+
   .one-news-hero__wrapper {
     padding: 164px 56px 122px;
   }
@@ -5239,6 +5294,19 @@ body:not(.loading) .loading-content {
 
   .news-footer__description {
     margin-bottom: 38px;
+  }
+
+  .no-webp .not-found {
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-768.png") no-repeat center/cover; }
+
+  .not-found-hero__wrapper {
+    top: 37.8vh;
+    left: 15.6vw;
+  }
+
+  .not-found-hero__topic-name {
+    top: 44.8vh;
+    left: 5.7vw;
   }
 
   .one-news-hero__wrapper {
@@ -5945,6 +6013,16 @@ body:not(.loading) .loading-content {
     margin-bottom: 34px;
   }
 
+  .not-found-hero__wrapper {
+    top: 34.8vh;
+    left: 0;
+    padding: 24px;
+  }
+
+  .not-found-hero__topic-name {
+    display: none;
+  }
+
   .one-news-hero__wrapper {
     padding: 116px 24px 74px;
   }
@@ -6208,6 +6286,9 @@ body:not(.loading) .loading-content {
   .about-philosophy__statistic {
     font-size: 40px;
   }
+
+  .no-webp .not-found {
+    background: url("/InteriorStudio/assets/img/main/footer/footer-bg-375.png") no-repeat center/cover; }
 }
 
 @media (max-width: 374px) {
@@ -6218,9 +6299,16 @@ body:not(.loading) .loading-content {
 
 .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1440.webp) no-repeat center/cover; }
 
+.webp .not-found { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1440.webp) no-repeat center/cover; }
+
 @media (max-width: 1024px) {
 
   .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1024.webp) no-repeat center/cover; }
+}
+
+@media (max-width: 1024px) {
+
+  .webp .not-found { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-1024.webp) no-repeat center/cover; }
 }
 
 @media (max-width: 768px) {
@@ -6228,7 +6316,17 @@ body:not(.loading) .loading-content {
   .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-768.webp) no-repeat center/cover; }
 }
 
+@media (max-width: 768px) {
+
+  .webp .not-found { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-768.webp) no-repeat center/cover; }
+}
+
 @media (max-width: 375px) {
 
   .webp .footer { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-375.webp) no-repeat center/cover; }
+}
+
+@media (max-width: 375px) {
+
+  .webp .not-found { background: url(/InteriorStudio/assets/img/main/footer/footer-bg-375.webp) no-repeat center/cover; }
 }
