@@ -4911,7 +4911,7 @@ body:not(.loading) .loading-content {
   }
 
   .footer .main-footer-small {
-    margin-top: 94px;
+    margin-top: 0;
   }
 
   .footer-small {
@@ -5600,10 +5600,6 @@ body:not(.loading) .loading-content {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 40px;
-  }
-
-  .footer .main-footer-small {
-    margin-top: 55px;
   }
 
   .footer-small {
