@@ -1222,9 +1222,6 @@ button.btn-send-request {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 3px;
   border-bottom: 1px solid #515151;
 }
@@ -4069,6 +4066,10 @@ body:not(.loading) .loading-content {
     font-size: 16px;
   }
 
+  .email__btn {
+    margin-top: 6px;
+  }
+
   .no-webp .footer {
     background: url("/InteriorStudio/assets/img/main/footer/footer-bg-1024.png") no-repeat center/cover; }
 
@@ -6025,6 +6026,10 @@ body:not(.loading) .loading-content {
     margin-bottom: 34px;
   }
 
+  .news-footer__footer-small {
+    padding: 0 24px 0;
+  }
+
   .not-found-hero__wrapper {
     top: 34.8vh;
     left: 0;
@@ -6307,6 +6312,10 @@ body:not(.loading) .loading-content {
 @media (max-width: 374px) {
   .form__radio-label {
     font-size: 7px;
+  }
+
+  .news-footer__inner {
+    padding: 42px 24px;
   }
 }
 
