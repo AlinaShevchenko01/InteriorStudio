@@ -5479,6 +5479,10 @@ body:not(.loading) .loading-content {
   .form__radio-label {
     font-size: 7px;
   }
+
+  .hero__inner_proportions {
+    bottom: 200px;
+  }
 }
 
 @media (max-width: 575px) {
