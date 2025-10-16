@@ -520,6 +520,10 @@ a {
   transition: filter 0.2s ease;
   transition: filter 0.2s ease, -webkit-filter 0.2s ease;
   text-decoration: none;
+  -webkit-text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip: none;
   cursor: pointer;
 }
 
@@ -729,7 +733,7 @@ a {
 }
 
 .btn-make-request:active {
-  background-color: rgba(253, 253, 253, 0.32);
+  background-color: rgba(255, 255, 255, 0.32);
 }
 
 button.btn-send-request {
@@ -738,7 +742,7 @@ button.btn-send-request {
   letter-spacing: 0.06em;
   color: #fff;
   background-color: transparent;
-  border: 1px solid rgba(253, 253, 253, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.32);
   padding: 16px 3.26vw;
   -webkit-transition: background-color, color 0.4s ease;
   transition: background-color, color 0.4s ease;
@@ -1416,6 +1420,14 @@ button.btn-send-request {
   color: #080808;
 }
 
+.footer-small.gray {
+  background-color: #fafafa;
+}
+
+.footer-small.gray .footer-small__text:nth-child(2) {
+  color: #080808;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -1438,11 +1450,12 @@ button.btn-send-request {
 
 .header.scroll a {
   color: #fff;
+  text-decoration: none;
 }
 
 .header.scroll .btn-send-request {
   color: #fff;
-  border: 1px solid rgba(253, 253, 253, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .header.scroll .header__languages {
@@ -1487,7 +1500,7 @@ button.btn-send-request {
 
 .header__wrapper.active .header__btn-request {
   color: #fff;
-  border: 1px solid rgba(253, 253, 253, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .header__wrapper.active .header__languages {
@@ -1638,6 +1651,7 @@ button.btn-send-request {
 .lorem__photo:nth-child(1) {
   top: 184px;
   left: -140px;
+  z-index: 1;
 }
 
 .lorem__photo:nth-child(2) {
@@ -1648,6 +1662,7 @@ button.btn-send-request {
 .lorem__photo:nth-child(3) {
   top: -144px;
   right: 320px;
+  z-index: 1;
 }
 
 .lorem__photo:nth-child(4) {
@@ -2777,6 +2792,10 @@ body:not(.loading) .loading-content {
   height: 100vh;
 }
 
+.about-philosophy {
+  background-color: #fafafa;
+}
+
 .about-philosophy__wrapper {
   position: relative;
   padding: 140px 0 144px;
@@ -2976,6 +2995,10 @@ body:not(.loading) .loading-content {
 
 .about-philosophy__text:first-of-type {
   margin: 0;
+}
+
+.about-work {
+  background-color: #fafafa;
 }
 
 .about-work__wrapper {
@@ -3630,7 +3653,7 @@ body:not(.loading) .loading-content {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  margin-top: 24px;
+  margin-top: -16px;
 }
 
 .one-project-hero__icon {
@@ -4113,6 +4136,10 @@ body:not(.loading) .loading-content {
   }
 
   .footer-small.white .footer-small__text:nth-child(2) {
+    color: #828282;
+  }
+
+  .footer-small.gray .footer-small__text:nth-child(2) {
     color: #828282;
   }
 
@@ -4766,10 +4793,6 @@ body:not(.loading) .loading-content {
 
   .one-project-hero__text {
     margin-bottom: 7.7vh;
-  }
-
-  .one-project-hero__icons {
-    margin-top: -16px;
   }
 
   .one-project-hero__social {
@@ -5527,6 +5550,7 @@ body:not(.loading) .loading-content {
     display: block;
     max-width: 80%;
     margin: 0 auto 98px;
+    border-color: #fff;
   }
 
   .collage__text {
